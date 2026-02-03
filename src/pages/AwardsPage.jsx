@@ -67,17 +67,17 @@ const AwardsPage = () => {
       <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         <motion.div
           style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
-          className="relative z-10 text-center px-6"
+          className="relative z-10 text-center px-6 md:px-8"
         >
-          <span className="text-cyan-500 font-mono text-xs tracking-[0.8em] uppercase mb-8 block">
+          <span className="text-cyan-500 font-mono text-[9px] md:text-xs tracking-[0.2em] md:tracking-[0.8em] uppercase mb-6 md:mb-8 block">
             Accomplishments
           </span>
-          <h1 className="text-[15vw] md:text-[12vw] font-display font-black leading-[0.8] uppercase italic">
+          <h1 className="text-4xl sm:text-7xl md:text-[12vw] font-display font-black leading-[0.85] uppercase italic tracking-tighter sm:tracking-normal">
             Prestigious
             <br />
             <span className="text-cyan-500">Awards</span>
           </h1>
-          <div className="mt-16 w-32 h-px bg-white/20 mx-auto" />
+          <div className="mt-10 md:mt-16 w-16 md:w-32 h-px bg-white/20 mx-auto" />
         </motion.div>
 
         {/* Technical Grid Overlay */}
@@ -128,25 +128,28 @@ const AwardSection = ({ award, progress, range }) => {
     <section className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-6 md:px-12">
       <motion.div
         style={{ opacity }}
-        className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+        className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center"
       >
         <div className="order-2 lg:order-1">
-          <span className="text-cyan-500 font-mono text-sm tracking-widest mb-6 block">
+          <span className="text-cyan-500 font-mono text-xs md:text-sm tracking-widest mb-4 md:mb-6 block">
             {award.year} // {award.category}
           </span>
-          <h2 className="text-5xl md:text-7xl font-display font-black uppercase mb-8 italic leading-tight">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-display font-black uppercase mb-6 md:mb-8 italic leading-tight">
             {award.title}
           </h2>
-          <p className="text-xl font-light text-white/60 tracking-wide max-w-md border-l-2 border-cyan-500 pl-8">
+          <p className="text-lg md:text-xl font-light text-white/60 tracking-wide max-w-md border-l-2 border-cyan-500 pl-6 md:pl-8">
             Awarded by the {award.organization} for outstanding contributions
             and commitment to media excellence.
           </p>
         </div>
 
-        <div className="order-1 lg:order-2 relative group">
+        <div className="order-1 lg:order-2 relative group px-4 md:px-0">
           <motion.div
-            style={{ y: imageY, scale }}
-            className="aspect-[4/5] rounded-3xl overflow-hidden relative shadow-2xl"
+            style={{
+              y: useTransform(progress, [range[0], range[1]], [20, -20]),
+              scale,
+            }}
+            className="aspect-4/5 rounded-2xl md:rounded-3xl overflow-hidden relative shadow-2xl"
           >
             <img
               src={award.image}
@@ -156,8 +159,8 @@ const AwardSection = ({ award, progress, range }) => {
             <div className="absolute inset-0 bg-cyan-500/10 mix-blend-overlay" />
 
             {/* Corner Accents */}
-            <div className="absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-cyan-500/50" />
-            <div className="absolute bottom-8 left-8 w-12 h-12 border-b-2 border-l-2 border-cyan-500/50" />
+            <div className="absolute top-4 right-4 md:top-8 md:right-8 w-8 h-8 md:w-12 md:h-12 border-t-2 border-r-2 border-cyan-500/50" />
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 w-8 h-8 md:w-12 md:h-12 border-b-2 border-l-2 border-cyan-500/50" />
           </motion.div>
 
           {/* Floating Label */}

@@ -85,15 +85,15 @@ const AboutPage = () => {
 
         <motion.div
           style={{ opacity: scene1Opacity }}
-          className="relative z-10 text-center px-6"
+          className="relative z-10 text-center px-4 md:px-6"
         >
-          <span className="text-cyan-400 text-[10px] font-bold tracking-[2em] uppercase mb-8 block">
+          <span className="text-cyan-400 text-[8px] md:text-[10px] font-bold tracking-[1em] md:tracking-[2em] uppercase mb-4 md:mb-8 block">
             The Pioneer
           </span>
-          <h1 className="text-7xl md:text-[10vw] font-display font-black leading-none uppercase tracking-tighter">
-            ANIL <br /> AYROOR
+          <h1 className="text-5xl sm:text-7xl md:text-[10vw] font-display font-black leading-none uppercase tracking-tighter">
+            ANIL <br className="sm:hidden" /> AYROOR
           </h1>
-          <p className="mt-12 max-w-xl mx-auto text-white/50 text-lg md:text-xl font-light leading-relaxed font-serif-elegant italic">
+          <p className="mt-8 md:mt-12 max-w-sm md:max-w-xl mx-auto text-white/50 text-base md:text-xl font-light leading-relaxed font-serif-elegant italic">
             "A mission to redefine media through the eyes of those who craft
             it."
           </p>
@@ -104,27 +104,27 @@ const AboutPage = () => {
       <section className="sticky top-0 h-screen w-full flex items-center justify-center pointer-events-none">
         <motion.div
           style={{ opacity: scene2Opacity, y: scene2Y }}
-          className="max-w-4xl px-12 text-center"
+          className="max-w-4xl px-6 md:px-12 text-center"
         >
-          <h2 className="text-5xl md:text-7xl font-display font-black uppercase mb-12">
+          <h2 className="text-4xl md:text-7xl font-display font-black uppercase mb-8 md:mb-12">
             CRAFTING <span className="text-cyan-400">IMPACT.</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-left">
-            <div className="space-y-6">
-              <span className="text-cyan-500 font-mono text-xs uppercase tracking-widest">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-left">
+            <div className="space-y-4 md:space-y-6">
+              <span className="text-cyan-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
                 Integrity_Log.01
               </span>
-              <p className="text-white/60 text-lg leading-relaxed font-light">
+              <p className="text-white/60 text-base md:text-lg leading-relaxed font-light">
                 For over three decades, Anil Ayroor has been the steady pulse of
                 Malayalam broadcasting, standing for truth when it mattered
                 most.
               </p>
             </div>
-            <div className="space-y-6">
-              <span className="text-cyan-500 font-mono text-xs uppercase tracking-widest">
+            <div className="space-y-4 md:space-y-6">
+              <span className="text-cyan-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
                 Innovation_Log.02
               </span>
-              <p className="text-white/60 text-lg leading-relaxed font-light">
+              <p className="text-white/60 text-base md:text-lg leading-relaxed font-light">
                 Now, with Big TV Malayalam, he introduces a staff-owned model
                 that empowers journalists to be true stakeholders in the
                 narrative.
@@ -138,27 +138,27 @@ const AboutPage = () => {
       <section className="sticky top-0 h-screen w-full flex items-center justify-center pointer-events-none">
         <motion.div
           style={{ opacity: scene3Opacity, scale: scene3Scale }}
-          className="relative z-10 w-full max-w-7xl px-12"
+          className="relative z-10 w-full max-w-7xl px-6 md:px-12"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div>
-              <span className="text-cyan-400 text-[10px] font-bold tracking-[1em] uppercase mb-6 block">
+              <span className="text-cyan-400 text-[10px] font-bold tracking-[1em] uppercase mb-4 md:mb-6 block">
                 The Model
               </span>
-              <h2 className="text-6xl md:text-8xl font-display font-black uppercase leading-[0.85] mb-8">
+              <h2 className="text-5xl md:text-8xl font-display font-black uppercase leading-[0.85] mb-6 md:mb-8">
                 STAFF <br /> <span className="text-cyan-400">OWNED.</span>
               </h2>
             </div>
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-12 rounded-[40px]">
-              <p className="text-2xl font-light leading-relaxed text-white/80 italic">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-[32px] md:rounded-[40px]">
+              <p className="text-xl md:text-2xl font-light leading-relaxed text-white/80 italic">
                 "We believe the best journalism happens when the creators aren't
                 just employees, but guardians of the platform's integrity."
               </p>
-              <div className="mt-12 flex items-center gap-6">
-                <div className="w-12 h-12 rounded-full border border-cyan-400 flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="mt-8 md:mt-12 flex items-center gap-4 md:gap-6">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-cyan-400 flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-cyan-400 animate-pulse" />
                 </div>
-                <span className="text-xs uppercase tracking-widest font-bold text-cyan-400">
+                <span className="text-[10px] md:text-xs uppercase tracking-widest font-bold text-cyan-400">
                   Revolutionary Equity
                 </span>
               </div>
@@ -184,7 +184,7 @@ const AboutPage = () => {
               p > 0.52 && p < 0.75 ? "auto" : "none",
             ),
           }}
-          className="flex gap-20 px-[20vw]"
+          className="flex gap-10 md:gap-20 px-[10vw] md:px-[20vw]"
         >
           {[
             {
@@ -208,15 +208,15 @@ const AboutPage = () => {
               desc: "A new era of staff-owned, independent journalism begins.",
             },
           ].map((milestone, idx) => (
-            <div key={idx} className="min-w-[400px] group">
-              <span className="text-8xl font-display font-black text-white/5 group-hover:text-cyan-500/10 transition-colors duration-700">
+            <div key={idx} className="min-w-[300px] md:min-w-[400px] group">
+              <span className="text-6xl md:text-8xl font-display font-black text-white/5 group-hover:text-cyan-500/10 transition-colors duration-700">
                 {milestone.year}
               </span>
-              <div className="-mt-8 ml-8">
-                <h4 className="text-3xl font-display font-black uppercase text-cyan-400 mb-4">
+              <div className="-mt-6 md:-mt-8 ml-4 md:ml-8">
+                <h4 className="text-2xl md:text-3xl font-display font-black uppercase text-cyan-400 mb-2 md:mb-4">
                   {milestone.event}
                 </h4>
-                <p className="text-white/40 text-lg max-w-xs">
+                <p className="text-white/40 text-sm md:text-lg max-w-[250px] md:max-w-xs">
                   {milestone.desc}
                 </p>
               </div>
@@ -243,15 +243,15 @@ const AboutPage = () => {
 
         <motion.div
           style={{ opacity: scene5Opacity }}
-          className="relative z-10 text-center px-6"
+          className="relative z-10 text-center px-4 md:px-6"
         >
-          <h2 className="text-6xl md:text-[8vw] font-display font-black uppercase leading-none tracking-tighter mb-12">
+          <h2 className="text-4xl sm:text-6xl md:text-[8vw] font-display font-black uppercase leading-none tracking-tighter mb-8 md:mb-12">
             THE <span className="text-cyan-400">FUTURE</span> <br /> IS LIVE.
           </h2>
           <motion.a
             href="/"
             whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center gap-6 px-12 py-6 bg-cyan-500 text-black rounded-full text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition-colors"
+            className="inline-flex items-center gap-4 md:gap-6 px-8 md:px-12 py-4 md:py-6 bg-cyan-500 text-black rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition-colors"
           >
             Back to Home
             <svg
@@ -260,7 +260,7 @@ const AboutPage = () => {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-4 h-4"
+              className="w-3 h-3 md:w-4 md:h-4"
             >
               <path
                 strokeLinecap="round"
