@@ -79,9 +79,10 @@ const Navbar = () => {
             <nav className="flex flex-col items-center gap-6 relative z-10">
               {[
                 { name: "Home", path: "/" },
-                { name: "Work", path: "/#work" },
+                { name: "Awards", path: "/awards" },
+                { name: "Events", path: "/events" },
+                { name: "Gallery", path: "/gallery" },
                 { name: "About", path: "/about" },
-                { name: "Focus", path: "/#growth" },
                 { name: "Contact", path: "/contact" },
               ].map((item, index) => (
                 <motion.div
@@ -93,11 +94,8 @@ const Navbar = () => {
                   <Link
                     to={item.path}
                     onClick={() => setMenuOpen(false)}
-                    className="group relative flex items-center gap-6"
+                    className="group relative flex items-center justify-center text-center"
                   >
-                    <span className="text-cyan-500 font-mono text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">
-                      0{index + 1}
-                    </span>
                     <span className="text-5xl md:text-[8vh] font-display font-black uppercase text-white hover:text-cyan-400 transition-all duration-300">
                       {item.name}
                     </span>

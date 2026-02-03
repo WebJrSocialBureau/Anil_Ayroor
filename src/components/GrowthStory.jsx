@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const GrowthStory = () => {
   const targetRef = useRef(null);
@@ -82,13 +83,12 @@ const GrowthStory = () => {
               A decade of breaking barriers and setting new benchmarks in the
               world of broadcasting and digital media.
             </p>
-            <motion.a
-              href="#work"
-              whileHover={{ x: 10 }}
+            <Link
+              to="/awards"
               className="group flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-black"
             >
               <span className="relative">
-                Explore More
+                Explore Awards
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-500 group-hover:w-full transition-all duration-300"></span>
               </span>
               <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-500">
@@ -107,7 +107,7 @@ const GrowthStory = () => {
                   />
                 </svg>
               </div>
-            </motion.a>
+            </Link>
           </div>
         </motion.div>
 
@@ -179,11 +179,11 @@ const GrowthStory = () => {
               places in us. Every frame we broadcast is a testament to our
               commitment to accuracy and meaningful storytelling.
             </p>
-            <a
-              href="#work"
+            <Link
+              to="/awards"
               className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-black group"
             >
-              <span>Explore Portfolio</span>
+              <span>Explore Awards</span>
               <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +200,7 @@ const GrowthStory = () => {
                   />
                 </svg>
               </div>
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

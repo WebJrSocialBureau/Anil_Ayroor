@@ -10,6 +10,7 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
@@ -78,14 +79,21 @@ const Footer = () => {
                 Navigation
               </h4>
               <ul className="space-y-4">
-                {["Home", "About", "Growth", "Work"].map((link) => (
-                  <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase()}`}
+                {[
+                  { name: "Home", path: "/" },
+                  { name: "About", path: "/about" },
+                  { name: "Awards", path: "/awards" },
+                  { name: "Events", path: "/events" },
+                  { name: "Gallery", path: "/gallery" },
+                  { name: "Contact", path: "/contact" },
+                ].map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.path}
                       className="text-white/40 hover:text-white transition-colors font-medium"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
