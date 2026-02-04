@@ -32,7 +32,7 @@ const About = () => {
         style={{ y: textY }}
         className="absolute top-20 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden"
       >
-        <span className="text-[25vw] font-display font-black text-black/3 whitespace-nowrap leading-none uppercase">
+        <span className="text-[20vw] lg:text-[25vw] font-display font-black text-black/3 whitespace-nowrap leading-none uppercase">
           JOURNALISM
         </span>
       </motion.div>
@@ -55,7 +55,7 @@ const About = () => {
 
           <motion.h2
             style={{ scale: headingScale }}
-            className="text-6xl md:text-[6.5vw] font-display font-black leading-[0.85] tracking-tight uppercase mb-12 text-black"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[6.5vw] font-display font-black leading-[0.9] lg:leading-[0.85] tracking-tight uppercase mb-8 md:mb-12 text-black"
           >
             PIONEERING <br />
             <span className="bg-clip-text text-transparent bg-linear-to-r from-[#003d47] via-[#00e5ff] to-[#003d47] drop-shadow-[0_0_20px_rgba(0,229,255,0.1)]">
@@ -65,8 +65,8 @@ const About = () => {
             PERSPECTIVE.
           </motion.h2>
 
-          <div className="space-y-10 text-xl md:text-2xl font-light leading-relaxed text-black/60 max-w-2xl">
-            <p className="first-letter:text-7xl first-letter:font-display first-letter:font-black first-letter:text-black first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8]">
+          <div className="space-y-8 md:space-y-10 text-lg md:text-2xl font-light leading-relaxed text-black/60 max-w-2xl">
+            <p className="first-letter:text-5xl md:first-letter:text-7xl first-letter:font-display first-letter:font-black first-letter:text-black first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8]">
               <span className="font-bold text-black">Anil Ayroor</span> is a
               distinguished visionary in Malayalam media. With a career spanning
               decades of integrity and innovation, he continues to redefine the
@@ -74,13 +74,13 @@ const About = () => {
             </p>
 
             <motion.div
-              className="bg-neutral-50 backdrop-blur-sm border-l-4 border-cyan-500 p-8 md:p-10 rounded-r-3xl"
+              className="bg-neutral-50 backdrop-blur-sm border-l-4 border-cyan-500 p-6 md:p-10 rounded-r-3xl"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <p className="font-serif-elegant italic text-2xl md:text-3xl text-black/80 leading-snug">
+              <p className="font-serif-elegant italic text-xl md:text-3xl text-black/80 leading-snug">
                 "Big TV Malayalam is not just a channel; it's a paradigm shift
                 where the journalists who craft the news are also the ones who
                 own the mission."
@@ -128,10 +128,10 @@ const About = () => {
         </motion.div>
 
         {/* Right Side - Parallax Image Container */}
-        <div className="lg:col-span-5 relative flex justify-center items-center h-full min-h-[500px] md:min-h-[700px]">
+        <div className="lg:col-span-5 relative flex justify-center items-center h-full min-h-[400px] md:min-h-[700px]">
           <motion.div
             style={{ y: imageY }}
-            className="relative w-full h-[600px] md:h-[750px] overflow-hidden rounded-[40px] shadow-2xl border border-black/5"
+            className="relative w-full h-[450px] md:h-[750px] overflow-hidden rounded-[30px] md:rounded-[40px] shadow-2xl border border-black/5"
           >
             <img
               src="/about_image.jpg"
@@ -168,7 +168,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto mt-16 md:mt-12 relative z-10 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-1 flex flex-col justify-end pb-8">
-            <h4 className="text-4xl font-display font-black text-black uppercase leading-none">
+            <h4 className="text-3xl md:text-4xl font-display font-black text-black uppercase leading-tight md:leading-none">
               Strategic <br />
               <span className="bg-clip-text text-transparent bg-linear-to-r from-[#003d47] via-[#00e5ff] to-[#003d47]">
                 Pillars
@@ -230,7 +230,7 @@ const About = () => {
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-500 mb-2 block">
                   {card.tag}
                 </span>
-                <h3 className="text-3xl font-display font-black text-black mb-6 uppercase tracking-tight group-hover:text-cyan-600 transition-colors">
+                <h3 className="text-2xl md:text-3xl font-display font-black text-black mb-6 uppercase tracking-tight group-hover:text-cyan-600 transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-black/50 leading-relaxed font-light group-hover:text-black/80 transition-colors">

@@ -26,46 +26,46 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[#050505] pt-32 pb-12 px-6 md:px-12 overflow-hidden">
+    <footer className="relative bg-[#050505] pt-16 md:pt-32 pb-12 px-6 md:px-12 overflow-hidden">
       {/* Parallax Decorative Background */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none select-none overflow-hidden opacity-[0.02]">
-        <h2 className="text-[30vw] font-display font-black leading-none uppercase whitespace-nowrap text-white">
+        <h2 className="text-[40vw] md:text-[30vw] font-display font-black leading-none uppercase whitespace-nowrap text-white">
           AYROOR
         </h2>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 mb-16 md:mb-32">
           {/* Main CTA */}
           <div className="md:col-span-6 lg:col-span-7">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-6xl md:text-8xl font-display font-black text-white leading-tight uppercase tracking-tighter"
+              className="text-5xl md:text-6xl lg:text-8xl font-display font-black text-white leading-tight uppercase tracking-tighter"
             >
               LET'S <br />
               <span className="bg-clip-text text-transparent bg-linear-to-r from-[#003d47] via-[#00e5ff] to-[#003d47]">
                 CONNECT.
               </span>
             </motion.h2>
-            <div className="mt-12 flex flex-col gap-6">
+            <div className="mt-8 md:mt-12 flex flex-col gap-4 md:gap-6">
               <a
                 href="mailto:contact@anilayroor.com"
-                className="group flex items-center gap-6"
+                className="group flex items-center gap-4 md:gap-6"
               >
-                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#00e5ff] group-hover:border-[#00e5ff] transition-all duration-500">
-                  <Mail className="w-6 h-6 text-white group-hover:text-black transition-colors" />
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#00e5ff] group-hover:border-[#00e5ff] transition-all duration-500 shrink-0">
+                  <Mail className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-black transition-colors" />
                 </div>
-                <span className="text-2xl font-display font-bold text-white/60 group-hover:text-white transition-colors tracking-tight">
+                <span className="text-lg md:text-xl lg:text-2xl font-display font-bold text-white/60 group-hover:text-white transition-colors tracking-tight break-all">
                   contact@anilayroor.com
                 </span>
               </a>
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white/40" />
+              <div className="flex items-center gap-4 md:gap-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 md:w-6 md:h-6 text-white/40" />
                 </div>
-                <span className="text-2xl font-display font-bold text-white/40 tracking-tight">
+                <span className="text-lg md:text-xl lg:text-2xl font-display font-bold text-white/40 tracking-tight">
                   +91 9876 543 210
                 </span>
               </div>
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links & Info */}
-          <div className="md:col-span-6 lg:col-span-5 grid grid-cols-2 gap-12">
+          <div className="md:col-span-6 lg:col-span-5 grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div>
               <h4 className="text-xs font-bold uppercase tracking-[0.4em] text-cyan-500 mb-8 underline decoration-cyan-500/30 underline-offset-8">
                 Navigation
