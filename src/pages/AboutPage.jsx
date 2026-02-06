@@ -78,7 +78,7 @@ const AboutPage = () => {
             playsInline
             className="w-full h-full object-cover opacity-40 grayscale"
           >
-            <source src="/Hero_Video.mp4" type="video/mp4" />
+            <source src="/Hero_Video.webm" type="video/webm" />
           </video>
           <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent" />
         </motion.div>
@@ -87,7 +87,7 @@ const AboutPage = () => {
           style={{ opacity: scene1Opacity }}
           className="relative z-10 text-center px-4 md:px-6"
         >
-          <span className="text-cyan-400 text-[8px] md:text-[10px] font-bold tracking-[1em] md:tracking-[2em] uppercase mb-4 md:mb-8 block">
+          <span className="text-red-500 text-[8px] md:text-[10px] font-bold tracking-[1em] md:tracking-[2em] uppercase mb-4 md:mb-8 block">
             The Pioneer
           </span>
           <h1 className="text-5xl sm:text-7xl md:text-[10vw] font-display font-black leading-none uppercase tracking-tighter">
@@ -107,11 +107,11 @@ const AboutPage = () => {
           className="max-w-4xl px-6 md:px-12 text-center"
         >
           <h2 className="text-4xl md:text-7xl font-display font-black uppercase mb-8 md:mb-12">
-            CRAFTING <span className="text-cyan-400">IMPACT.</span>
+            CRAFTING <span className="text-red-500">IMPACT.</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-left">
             <div className="space-y-4 md:space-y-6">
-              <span className="text-cyan-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
+              <span className="text-red-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
                 Integrity_Log.01
               </span>
               <p className="text-white/60 text-base md:text-lg leading-relaxed font-light">
@@ -121,7 +121,7 @@ const AboutPage = () => {
               </p>
             </div>
             <div className="space-y-4 md:space-y-6">
-              <span className="text-cyan-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
+              <span className="text-red-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
                 Innovation_Log.02
               </span>
               <p className="text-white/60 text-base md:text-lg leading-relaxed font-light">
@@ -142,11 +142,11 @@ const AboutPage = () => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div>
-              <span className="text-cyan-400 text-[10px] font-bold tracking-[1em] uppercase mb-4 md:mb-6 block">
+              <span className="text-red-500 text-[10px] font-bold tracking-[1em] uppercase mb-4 md:mb-6 block">
                 The Model
               </span>
               <h2 className="text-5xl md:text-8xl font-display font-black uppercase leading-[0.85] mb-6 md:mb-8">
-                STAFF <br /> <span className="text-cyan-400">OWNED.</span>
+                STAFF <br /> <span className="text-red-500">OWNED.</span>
               </h2>
             </div>
             <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-[32px] md:rounded-[40px]">
@@ -155,10 +155,10 @@ const AboutPage = () => {
                 just employees, but guardians of the platform's integrity."
               </p>
               <div className="mt-8 md:mt-12 flex items-center gap-4 md:gap-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-cyan-400 flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-cyan-400 animate-pulse" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-red-500 flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500 animate-pulse" />
                 </div>
-                <span className="text-[10px] md:text-xs uppercase tracking-widest font-bold text-cyan-400">
+                <span className="text-[10px] md:text-xs uppercase tracking-widest font-bold text-red-500">
                   Revolutionary Equity
                 </span>
               </div>
@@ -209,11 +209,11 @@ const AboutPage = () => {
             },
           ].map((milestone, idx) => (
             <div key={idx} className="min-w-[300px] md:min-w-[400px] group">
-              <span className="text-6xl md:text-8xl font-display font-black text-white/5 group-hover:text-cyan-500/10 transition-colors duration-700">
+              <span className="text-6xl md:text-8xl font-display font-black text-white/5 group-hover:text-red-500/10 transition-colors duration-700">
                 {milestone.year}
               </span>
               <div className="-mt-6 md:-mt-8 ml-4 md:ml-8">
-                <h4 className="text-2xl md:text-3xl font-display font-black uppercase text-cyan-400 mb-2 md:mb-4">
+                <h4 className="text-2xl md:text-3xl font-display font-black uppercase text-red-500 mb-2 md:mb-4">
                   {milestone.event}
                 </h4>
                 <p className="text-white/40 text-sm md:text-lg max-w-[250px] md:max-w-xs">
@@ -234,7 +234,7 @@ const AboutPage = () => {
           style={{ opacity: scene5Opacity }}
           className="absolute inset-0"
         >
-          <div className="absolute inset-0 bg-cyan-900/20 mix-blend-overlay z-1" />
+          <div className="absolute inset-0 bg-red-900/20 mix-blend-overlay z-1" />
           <img
             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
             className="w-full h-full object-cover grayscale opacity-30"
@@ -246,12 +246,12 @@ const AboutPage = () => {
           className="relative z-10 text-center px-4 md:px-6"
         >
           <h2 className="text-4xl sm:text-6xl md:text-[8vw] font-display font-black uppercase leading-none tracking-tighter mb-8 md:mb-12">
-            THE <span className="text-cyan-400">FUTURE</span> <br /> IS LIVE.
+            THE <span className="text-red-500">FUTURE</span> <br /> IS LIVE.
           </h2>
           <motion.a
             href="/"
             whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center gap-4 md:gap-6 px-8 md:px-12 py-4 md:py-6 bg-cyan-500 text-black rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition-colors"
+            className="inline-flex items-center gap-4 md:gap-6 px-8 md:px-12 py-4 md:py-6 bg-red-600 text-black rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition-colors"
           >
             Back to Home
             <svg

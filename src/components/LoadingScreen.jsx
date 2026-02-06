@@ -81,7 +81,7 @@ const LoadingScreen = ({ onComplete }) => {
         {/* Dynamic Progress Bar */}
         <div className="mt-16 w-64 sm:w-96 h-[2px] bg-white/5 relative overflow-hidden rounded-full">
           <motion.div
-            className="absolute top-0 left-0 h-full bg-cyan-400 shadow-[0_0_20px_rgba(0,229,255,0.7)]"
+            className="absolute top-0 left-0 h-full bg-red-500 shadow-[0_0_20px_rgba(239,68,68,0.7)]"
             initial={{ width: "0%" }}
             animate={{ width: `${count}%` }}
             transition={{ type: "spring", damping: 30, stiffness: 100 }}
@@ -97,7 +97,7 @@ const LoadingScreen = ({ onComplete }) => {
                 initial={{ y: "100%" }}
                 animate={{ y: "0%" }}
                 exit={{ y: "-100%" }}
-                className="text-[10px] font-bold tracking-[0.6em] uppercase text-cyan-500/40 font-display"
+                className="text-[10px] font-bold tracking-[0.6em] uppercase text-red-500/40 font-display"
               >
                 {count < 30
                   ? "SYSTEM_BOOT"
@@ -111,7 +111,7 @@ const LoadingScreen = ({ onComplete }) => {
       </div>
 
       {/* Modern Scanline Effect */}
-      <div className="absolute inset-0 pointer-events-none bg-linear-to-b from-transparent via-cyan-500/5 to-transparent h-2 w-full animate-scanline z-50 overflow-hidden" />
+      <div className="absolute inset-0 pointer-events-none bg-linear-to-b from-transparent via-red-500/5 to-transparent h-2 w-full animate-scanline z-50 overflow-hidden" />
 
       {/* Finishing Flash Transition */}
       <AnimatePresence>

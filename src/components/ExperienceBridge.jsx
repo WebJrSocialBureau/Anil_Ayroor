@@ -16,14 +16,14 @@ const ExperienceBridge = () => {
   return (
     <section className="bg-black py-32 overflow-hidden border-t border-white/5 relative">
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-cyan-500/10 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-red-600/10 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-cyan-500 font-mono text-xs uppercase tracking-[0.5em] mb-4 block"
+          className="text-red-600 font-mono text-xs uppercase tracking-[0.5em] mb-4 block"
         >
           GLOBAL_INFLUENCE
         </motion.span>
@@ -32,7 +32,7 @@ const ExperienceBridge = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-4xl md:text-6xl font-display font-black text-white uppercase italic leading-tight"
+          className="text-2xl md:text-6xl font-display font-black text-white uppercase italic leading-tight break-words"
         >
           Powering the Next
           <br />
@@ -45,10 +45,10 @@ const ExperienceBridge = () => {
         <div className="flex whitespace-nowrap animate-infinite-scroll">
           {[...partners, ...partners].map((partner, index) => (
             <div key={index} className="flex items-center mx-12 md:mx-20">
-              <span className="text-3xl md:text-5xl font-display font-black text-white/10 hover:text-cyan-500/40 transition-colors duration-500 cursor-default uppercase italic tracking-tighter">
+              <span className="text-3xl md:text-5xl font-display font-black text-white/10 hover:text-red-600/40 transition-colors duration-500 cursor-default uppercase italic tracking-tighter">
                 {partner}
               </span>
-              <div className="ml-12 md:ml-20 w-2 h-2 rounded-full bg-cyan-500/20" />
+              <div className="ml-12 md:ml-20 w-2 h-2 rounded-full bg-red-600/20" />
             </div>
           ))}
         </div>
@@ -73,7 +73,7 @@ const ExperienceBridge = () => {
             <div className="text-4xl md:text-5xl font-display font-black text-white mb-2">
               {stat.value}
             </div>
-            <div className="text-[10px] font-mono text-cyan-500/60 uppercase tracking-widest">
+            <div className="text-[10px] font-mono text-red-500/60 uppercase tracking-widest">
               {stat.label}
             </div>
           </motion.div>

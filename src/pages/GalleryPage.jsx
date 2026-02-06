@@ -52,7 +52,7 @@ const GalleryPage = ({ items = [] }) => {
       <div
         className="pointer-events-none fixed inset-0 z-10 transition-opacity duration-1000"
         style={{
-          background: `radial-gradient(circle 600px at ${mousePos.x}px ${mousePos.y}px, rgba(0, 229, 255, 0.04), transparent)`,
+          background: `radial-gradient(circle 600px at ${mousePos.x}px ${mousePos.y}px, rgba(239, 68, 68, 0.04), transparent)`,
         }}
       />
 
@@ -64,7 +64,7 @@ const GalleryPage = ({ items = [] }) => {
             whileInView={{ width: "120px" }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: "circOut" }}
-            className="h-px bg-cyan-500/50 mx-auto mb-12 shadow-[0_0_15px_rgba(0,229,255,0.5)]"
+            className="h-px bg-red-500/50 mx-auto mb-12 shadow-[0_0_15px_rgba(239,68,68,0.5)]"
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -74,7 +74,7 @@ const GalleryPage = ({ items = [] }) => {
             <h1 className="text-[14vw] md:text-[10vw] font-display font-black leading-[0.75] uppercase italic tracking-tighter text-transparent bg-clip-text bg-linear-to-b from-white via-white/80 to-white/20">
               Visual
               <br />
-              <span className="text-cyan-500 text-[11vw] md:text-[8vw] drop-shadow-[0_0_20px_rgba(0,229,255,0.2)]">
+              <span className="text-red-600 text-[11vw] md:text-[8vw] drop-shadow-[0_0_20px_rgba(239,68,68,0.2)]">
                 Archive_
               </span>
             </h1>
@@ -93,7 +93,7 @@ const GalleryPage = ({ items = [] }) => {
                 onClick={() => setActiveCategory(cat)}
                 className={`relative px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-500 ${
                   activeCategory === cat
-                    ? "text-black bg-cyan-500 shadow-[0_0_25px_rgba(0,229,255,0.3)]"
+                    ? "text-black bg-red-600 shadow-[0_0_25px_rgba(239,68,68,0.3)]"
                     : "text-white/40 hover:text-white border border-white/10 hover:border-white/20"
                 }`}
               >
@@ -101,7 +101,7 @@ const GalleryPage = ({ items = [] }) => {
                 {activeCategory === cat && (
                   <motion.div
                     layoutId="activeFilter"
-                    className="absolute inset-0 rounded-full border border-cyan-400/50"
+                    className="absolute inset-0 rounded-full border border-red-500/50"
                   />
                 )}
               </button>
@@ -174,7 +174,7 @@ const GalleryPage = ({ items = [] }) => {
                     e.stopPropagation();
                     navigateLightbox(-1);
                   }}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-4 bg-white/5 hover:bg-cyan-500 rounded-full transition-all group/btn"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-4 bg-white/5 hover:bg-red-600 rounded-full transition-all group/btn"
                 >
                   <ArrowRight className="w-6 h-6 rotate-180 group-hover/btn:-translate-x-1 transition-transform" />
                 </button>
@@ -183,7 +183,7 @@ const GalleryPage = ({ items = [] }) => {
                     e.stopPropagation();
                     navigateLightbox(1);
                   }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-4 bg-white/5 hover:bg-cyan-500 rounded-full transition-all group/btn"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-4 bg-white/5 hover:bg-red-600 rounded-full transition-all group/btn"
                 >
                   <ArrowRight className="w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
@@ -203,9 +203,9 @@ const GalleryPage = ({ items = [] }) => {
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: "40px" }}
-                    className="h-px bg-cyan-500 mb-6"
+                    className="h-px bg-red-600 mb-6"
                   />
-                  <span className="text-cyan-500 font-mono text-xs uppercase tracking-[0.5em] mb-4 block">
+                  <span className="text-red-500 font-mono text-xs uppercase tracking-[0.5em] mb-4 block">
                     {selectedImage.category}
                   </span>
                   <h2 className="text-5xl font-display font-black uppercase italic leading-[0.9] tracking-tighter">
@@ -244,13 +244,13 @@ const GalleryPage = ({ items = [] }) => {
                 </div>
 
                 <div className="pt-10 flex flex-col gap-4">
-                  <button className="flex items-center justify-between w-full py-4 px-8 bg-cyan-500 text-black rounded-full text-xs font-black uppercase tracking-widest hover:scale-[1.02] transition-all shadow-[0_0_30px_rgba(0,229,255,0.2)]">
+                  <button className="flex items-center justify-between w-full py-4 px-8 bg-red-600 text-black rounded-full text-xs font-black uppercase tracking-widest hover:scale-[1.02] transition-all shadow-[0_0_30px_rgba(239,68,68,0.2)]">
                     Direct_Share
                     <Share2 className="w-4 h-4" />
                   </button>
                   <button className="flex items-center justify-between w-full py-4 px-8 border border-white/10 hover:border-white/30 rounded-full text-xs font-bold uppercase tracking-widest transition-all">
                     Technical_Specs
-                    <Info className="w-4 h-4 text-cyan-500" />
+                    <Info className="w-4 h-4 text-red-500" />
                   </button>
                 </div>
               </div>
@@ -296,7 +296,7 @@ const GalleryItem = ({ item, index, onExpand }) => {
           <div
             className="w-full h-full"
             style={{
-              backgroundImage: `linear-gradient(to right, cyan 1px, transparent 1px), linear-gradient(to bottom, cyan 1px, transparent 1px)`,
+              backgroundImage: `linear-gradient(to right, red 1px, transparent 1px), linear-gradient(to bottom, red 1px, transparent 1px)`,
               backgroundSize: "20px 20px",
             }}
           />
@@ -305,7 +305,7 @@ const GalleryItem = ({ item, index, onExpand }) => {
         {/* Cinematic Overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500 flex flex-col justify-end p-8">
           <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-cyan-500 font-mono text-[9px] uppercase tracking-[0.3em] mb-2 block">
+            <span className="text-red-500 font-mono text-[9px] uppercase tracking-[0.3em] mb-2 block">
               {item.category}
             </span>
             <h3 className="text-2xl font-display font-black uppercase italic text-white mb-2">
@@ -315,15 +315,15 @@ const GalleryItem = ({ item, index, onExpand }) => {
               <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">
                 Expand_Viewer
               </span>
-              <div className="flex-1 h-px bg-cyan-500/30" />
-              <Maximize2 className="w-4 h-4 text-cyan-500" />
+              <div className="flex-1 h-px bg-red-600/30" />
+              <Maximize2 className="w-4 h-4 text-red-600" />
             </div>
           </div>
         </div>
 
         {/* Branded Corner */}
         <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="w-8 h-8 border-t border-r border-cyan-500/50" />
+          <div className="w-8 h-8 border-t border-r border-red-600/50" />
         </div>
       </div>
     </motion.div>

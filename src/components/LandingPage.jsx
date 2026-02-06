@@ -26,20 +26,20 @@ const LandingPage = ({ galleryItems }) => {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
               <h2 className="text-6xl md:text-[8vw] font-display font-black text-black leading-[0.8]">
                 <span className="block text-black">
-                  GALLERY<span className="text-cyan-400">.</span>
+                  GALLERY<span className="text-red-500">.</span>
                 </span>
               </h2>
               <div className="flex flex-col items-start gap-6">
-                <p className="text-neutral-600 max-w-sm text-sm md:text-base font-light border-l-2 border-cyan-400 pl-6">
+                <p className="text-neutral-600 max-w-sm text-sm md:text-base font-light border-l-2 border-red-500 pl-6">
                   A Visual Chronicle: A curated showcase of iconic moments and
                   prestigious highlights across the media landscape.
                 </p>
                 <Link
                   to="/gallery"
-                  className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-600 hover:text-black transition-colors"
+                  className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-red-600 hover:text-black transition-colors"
                 >
                   VIEW_ALL_ARCHIVE
-                  <div className="w-8 h-px bg-cyan-600/30 group-hover:w-12 group-hover:bg-black transition-all" />
+                  <div className="w-8 h-px bg-red-600/30 group-hover:w-12 group-hover:bg-black transition-all" />
                 </Link>
               </div>
             </div>

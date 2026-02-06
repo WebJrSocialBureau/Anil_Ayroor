@@ -40,7 +40,7 @@ const ZoomTransition = ({ children }) => {
             playsInline
             className="w-full h-full object-cover rounded-[40px] shadow-2xl grayscale"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-cyan-500/20 to-transparent rounded-[40px] mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-red-500/20 to-transparent rounded-[40px] mix-blend-overlay"></div>
 
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-white text-[10px] font-bold tracking-[1.5em] uppercase opacity-40">

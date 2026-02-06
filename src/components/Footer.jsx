@@ -45,7 +45,7 @@ const Footer = () => {
               className="text-5xl md:text-6xl lg:text-8xl font-display font-black text-white leading-tight uppercase tracking-tighter"
             >
               LET'S <br />
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-[#003d47] via-[#00e5ff] to-[#003d47]">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-[#450a0a] via-[#ef4444] to-[#450a0a]">
                 CONNECT.
               </span>
             </motion.h2>
@@ -54,36 +54,28 @@ const Footer = () => {
                 href="mailto:anil@time7.in"
                 className="group flex items-center gap-4 md:gap-6"
               >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#00e5ff] group-hover:border-[#00e5ff] transition-all duration-500 shrink-0">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#ef4444] group-hover:border-[#ef4444] transition-all duration-500 shrink-0">
                   <Mail className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-black transition-colors" />
                 </div>
                 <span className="text-lg md:text-xl lg:text-2xl font-display font-bold text-white/60 group-hover:text-white transition-colors tracking-tight break-all">
                   anil@time7.in
                 </span>
               </a>
-              <div className="flex items-center gap-4 md:gap-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 md:w-6 md:h-6 text-white/40" />
-                </div>
-                <span className="text-lg md:text-xl lg:text-2xl font-display font-bold text-white/40 tracking-tight">
-                  +91 9876 543 210
-                </span>
-              </div>
             </div>
           </div>
 
           {/* Quick Links & Info */}
           <div className="md:col-span-6 lg:col-span-5 grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-[0.4em] text-cyan-500 mb-8 underline decoration-cyan-500/30 underline-offset-8">
+              <h4 className="text-xs font-bold uppercase tracking-[0.4em] text-red-500 mb-8 underline decoration-red-500/30 underline-offset-8">
                 Navigation
               </h4>
               <ul className="space-y-4">
                 {[
                   { name: "Home", path: "/" },
                   { name: "About", path: "/about" },
-                  { name: "Awards", path: "/awards" },
-                  { name: "Events", path: "/events" },
+                  // { name: "Awards", path: "/awards" },
+                  // { name: "Events", path: "/events" },
                   { name: "Gallery", path: "/gallery" },
                   { name: "Contact", path: "/contact" },
                 ].map((link) => (
@@ -99,7 +91,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-[0.4em] text-cyan-500 mb-8 underline decoration-cyan-500/30 underline-offset-8">
+              <h4 className="text-xs font-bold uppercase tracking-[0.4em] text-red-500 mb-8 underline decoration-red-500/30 underline-offset-8">
                 Social Presence
               </h4>
               <ul className="space-y-4">
@@ -109,7 +101,7 @@ const Footer = () => {
                       href={social.href}
                       className="text-white/40 hover:text-white transition-colors font-medium flex items-center gap-3"
                     >
-                      <span className="text-cyan-500/50">{social.icon}</span>
+                      <span className="text-red-500/50">{social.icon}</span>
                       {social.label}
                     </a>
                   </li>
@@ -135,15 +127,15 @@ const Footer = () => {
             className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 hover:text-white transition-all duration-300"
           >
             <span>Back to Top</span>
-            <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#00e5ff] group-hover:bg-[#00e5ff]/10 transition-all duration-500 shadow-2xl">
-              <ArrowUp className="w-5 h-5 text-white/30 group-hover:text-[#00e5ff]" />
+            <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#ef4444] group-hover:bg-[#ef4444]/10 transition-all duration-500 shadow-2xl">
+              <ArrowUp className="w-5 h-5 text-white/30 group-hover:text-[#ef4444]" />
             </div>
           </motion.button>
         </div>
       </div>
 
       {/* Modern Gradient Accent */}
-      <div className="absolute bottom-0 right-0 w-[50vw] h-[50vh] bg-cyan-500/5 blur-[150px] rounded-full translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-[50vw] h-[50vh] bg-red-600/5 blur-[150px] rounded-full translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
     </footer>
   );
 };

@@ -13,9 +13,9 @@ const PageTransition = ({ children }) => {
         {children}
       </motion.div>
 
-      {/* Slide 1: Primary Branded Wipe (Cyan) */}
+      {/* Slide 1: Primary Branded Wipe (Red) */}
       <motion.div
-        className="fixed inset-0 z-1000 bg-cyan-500 origin-bottom"
+        className="fixed inset-0 z-1000 bg-red-600 origin-bottom"
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 1 }}
@@ -46,8 +46,8 @@ const PageTransition = ({ children }) => {
           transition={{ delay: 0.4 }}
           className="relative z-10 flex flex-col items-center gap-4"
         >
-          <div className="w-12 h-px bg-cyan-500/50 animate-pulse" />
-          <span className="text-[10px] font-mono tracking-[0.8em] text-cyan-500 uppercase">
+          <div className="w-12 h-px bg-red-600/50 animate-pulse" />
+          <span className="text-[10px] font-mono tracking-[0.8em] text-red-500 uppercase">
             Initializing_Sync
           </span>
         </motion.div>

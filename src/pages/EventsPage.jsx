@@ -161,7 +161,7 @@ const EventsPage = () => {
             whileInView={{ width: "100px" }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: "circOut" }}
-            className="h-px bg-cyan-500 mx-auto mb-10"
+            className="h-px bg-red-500 mx-auto mb-10"
           />
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -171,7 +171,7 @@ const EventsPage = () => {
           >
             Chronicle
             <br />
-            <span className="text-cyan-500 text-[10vw] md:text-[6vw]">
+            <span className="text-red-500 text-[10vw] md:text-[6vw]">
               Of_Events
             </span>
           </motion.h1>
@@ -191,7 +191,7 @@ const EventsPage = () => {
                   onClick={() => setFilterLocation(loc)}
                   className={`px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest border transition-all duration-300 ${
                     filterLocation === loc
-                      ? "bg-cyan-500 border-cyan-500 text-black shadow-[0_0_20px_rgba(0,229,255,0.3)]"
+                      ? "bg-red-500 border-red-500 text-black shadow-[0_0_20px_rgba(239,68,68,0.3)]"
                       : "border-white/10 text-white/40 hover:border-white/30"
                   }`}
                 >
@@ -206,7 +206,7 @@ const EventsPage = () => {
                   onClick={() => setFilterMonth(m)}
                   className={`px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest border transition-all duration-300 ${
                     filterMonth === m
-                      ? "bg-cyan-500 border-cyan-500 text-black shadow-[0_0_20px_rgba(0,229,255,0.3)]"
+                      ? "bg-red-500 border-red-500 text-black shadow-[0_0_20px_rgba(239,68,68,0.3)]"
                       : "border-white/10 text-white/40 hover:border-white/30"
                   }`}
                 >
@@ -247,7 +247,7 @@ const EventsPage = () => {
             </motion.div>
           ) : (
             <div className="min-h-[40vh] flex flex-col items-center justify-center text-center">
-              <X className="w-16 h-16 text-cyan-500/20 mb-6" />
+              <X className="w-16 h-16 text-red-500/20 mb-6" />
               <h3 className="text-2xl font-display font-black uppercase opacity-50">
                 No events match this criteria.
               </h3>
@@ -256,7 +256,7 @@ const EventsPage = () => {
                   setFilterLocation("All");
                   setFilterMonth("All");
                 }}
-                className="mt-8 text-cyan-500 font-mono text-xs uppercase tracking-[0.4em] underline hover:text-white transition-colors"
+                className="mt-8 text-red-500 font-mono text-xs uppercase tracking-[0.4em] underline hover:text-white transition-colors"
               >
                 Restore_Timeline
               </button>
@@ -285,12 +285,12 @@ const EventItem = ({ event, index }) => {
     >
       {/* Branded Corner Accent */}
       <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-        <div className="w-8 h-8 border-t-2 border-r-2 border-cyan-500/60" />
+        <div className="w-8 h-8 border-t-2 border-r-2 border-red-500/60" />
       </div>
 
       <div className="flex justify-between items-start mb-10">
         <div className="flex flex-col">
-          <span className="text-4xl md:text-5xl font-display font-black text-cyan-500">
+          <span className="text-4xl md:text-5xl font-display font-black text-red-500">
             {event.date.split(" ")[1]}
           </span>
           <span className="text-lg font-display font-bold text-white uppercase tracking-tighter">
@@ -300,15 +300,16 @@ const EventItem = ({ event, index }) => {
         <div className="text-right">
           <span className="text-[10px] font-mono text-white/20 tracking-[0.3em] uppercase block mb-1">
             {event.id}
+            {event.id}
           </span>
-          <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/5 border border-cyan-500/20 text-[9px] font-bold text-cyan-400 uppercase tracking-widest">
+          <span className="inline-block px-3 py-1 rounded-full bg-red-500/5 border border-red-500/20 text-[9px] font-bold text-red-400 uppercase tracking-widest">
             {event.category}
           </span>
         </div>
       </div>
 
       <div className="space-y-4 mb-10 flex-grow">
-        <h3 className="text-2xl md:text-3xl font-display font-black uppercase italic leading-tight group-hover:text-cyan-400 transition-colors">
+        <h3 className="text-2xl md:text-3xl font-display font-black uppercase italic leading-tight group-hover:text-red-400 transition-colors">
           {event.title}
         </h3>
         <p className="text-white/40 font-light leading-relaxed text-sm">
@@ -318,8 +319,8 @@ const EventItem = ({ event, index }) => {
 
       <div className="space-y-4 pt-8 border-t border-white/5">
         <div className="flex items-center gap-4">
-          <div className="w-8 h-8 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
-            <Clock className="w-4 h-4 text-cyan-500" />
+          <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
+            <Clock className="w-4 h-4 text-red-500" />
           </div>
           <div>
             <span className="text-[9px] uppercase tracking-widest text-white/20 block">
@@ -330,8 +331,8 @@ const EventItem = ({ event, index }) => {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="w-8 h-8 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
-            <MapPin className="w-4 h-4 text-cyan-500" />
+          <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
+            <MapPin className="w-4 h-4 text-red-500" />
           </div>
           <div>
             <span className="text-[9px] uppercase tracking-widest text-white/20 block">
@@ -347,14 +348,14 @@ const EventItem = ({ event, index }) => {
 
       <motion.button
         whileHover={{ x: 8 }}
-        className="mt-10 flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-500/60 group-hover:text-cyan-400 transition-colors"
+        className="mt-10 flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-red-500/60 group-hover:text-red-400 transition-colors"
       >
         ACCESS_DETAILS
         <ArrowRight className="w-3 h-3 group-hover:translate-x-2 transition-transform" />
       </motion.button>
 
       {/* Interactive Shine */}
-      <div className="absolute inset-0 bg-linear-to-tr from-cyan-500/0 via-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/[0.02] transition-colors pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-tr from-red-500/0 via-red-500/0 to-red-500/0 group-hover:from-red-500/2 transition-colors pointer-events-none" />
     </motion.div>
   );
 };

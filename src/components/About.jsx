@@ -47,8 +47,8 @@ const About = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="w-12 h-px bg-cyan-400"></span>
-            <span className="text-xs uppercase tracking-[0.4em] text-cyan-400 font-bold">
+            <span className="w-12 h-px bg-red-500"></span>
+            <span className="text-xs uppercase tracking-[0.4em] text-red-500 font-bold">
               The Story
             </span>
           </div>
@@ -58,7 +58,7 @@ const About = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-[6.5vw] font-display font-black leading-[0.9] lg:leading-[0.85] tracking-tight uppercase mb-8 md:mb-12 text-black"
           >
             PIONEERING <br />
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-[#003d47] via-[#00e5ff] to-[#003d47] drop-shadow-[0_0_20px_rgba(0,229,255,0.1)]">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-[#450a0a] via-[#ef4444] to-[#450a0a] drop-shadow-[0_0_20px_rgba(239,68,68,0.1)]">
               MEDIA
             </span>{" "}
             <br />
@@ -75,7 +75,7 @@ const About = () => {
             </p>
 
             <motion.div
-              className="bg-neutral-50 backdrop-blur-sm border-l-4 border-cyan-500 p-6 md:p-10 rounded-r-3xl"
+              className="bg-neutral-50 backdrop-blur-sm border-l-4 border-red-600 p-6 md:p-10 rounded-r-3xl"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -108,7 +108,7 @@ const About = () => {
                 className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.4em] text-black/40 hover:text-black transition-all duration-500"
               >
                 <span>Explore Story</span>
-                <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-[#00e5ff] group-hover:border-[#00e5ff] transition-all duration-500">
+                <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-[#ef4444] group-hover:border-[#ef4444] transition-all duration-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -142,7 +142,7 @@ const About = () => {
             />
             {/* Artistic Overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-400/10 blur-[80px] rounded-full"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 blur-[80px] rounded-full"></div>
 
             {/* Visual Callouts */}
             <div className="absolute bottom-12 left-12 right-12">
@@ -170,9 +170,9 @@ const About = () => {
       <div className="max-w-7xl mx-auto mt-16 md:mt-12 relative z-10 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-1 flex flex-col justify-end pb-8">
-            <h4 className="text-3xl md:text-4xl font-display font-black text-black uppercase leading-tight md:leading-none">
+            <h4 className="text-5xl md:text-4xl font-display font-black text-black uppercase leading-tight md:leading-none">
               Strategic <br />
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-[#003d47] via-[#00e5ff] to-[#003d47]">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-[#450a0a] via-[#ef4444] to-[#450a0a]">
                 Pillars
               </span>
             </h4>
@@ -203,23 +203,23 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 + idx * 0.1 }}
               whileHover={{ y: -10 }}
-              className="group relative bg-neutral-50 p-10 rounded-[32px] overflow-hidden border border-black/5 hover:border-cyan-500/20 transition-all duration-500"
+              className="group relative bg-neutral-50 p-10 rounded-[32px] overflow-hidden border border-black/5 hover:border-red-600/20 transition-all duration-500"
             >
               <div className="absolute top-0 right-0 p-8">
-                <span className="text-6xl font-display font-black text-black/3 group-hover:text-cyan-500/10 transition-colors">
+                <span className="text-6xl font-display font-black text-black/3 group-hover:text-red-600/10 transition-colors">
                   {card.id}
                 </span>
               </div>
 
               <div className="relative z-10">
-                <div className="w-10 h-10 rounded-xl bg-cyan-400/10 flex items-center justify-center mb-8 border border-cyan-400/20 group-hover:bg-cyan-400 group-hover:border-cyan-400 transition-all duration-500">
+                <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center mb-8 border border-red-500/20 group-hover:bg-red-500 group-hover:border-red-500 transition-all duration-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={2}
                     stroke="currentColor"
-                    className="w-5 h-5 text-cyan-400 group-hover:text-white transition-colors"
+                    className="w-5 h-5 text-red-500 group-hover:text-white transition-colors"
                   >
                     <path
                       strokeLinecap="round"
@@ -229,10 +229,10 @@ const About = () => {
                   </svg>
                 </div>
 
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-500 mb-2 block">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-red-600 mb-2 block">
                   {card.tag}
                 </span>
-                <h3 className="text-2xl md:text-3xl font-display font-black text-black mb-6 uppercase tracking-tight group-hover:text-cyan-600 transition-colors">
+                <h3 className="text-2xl md:text-3xl font-display font-black text-black mb-6 uppercase tracking-tight group-hover:text-red-700 transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-black/50 leading-relaxed font-light group-hover:text-black/80 transition-colors">
@@ -241,7 +241,7 @@ const About = () => {
               </div>
 
               {/* Hover Glow */}
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-cyan-400/5 blur-[60px] group-hover:bg-cyan-400/10 transition-all duration-700"></div>
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-red-500/5 blur-[60px] group-hover:bg-red-500/10 transition-all duration-700"></div>
             </motion.div>
           ))}
         </div>

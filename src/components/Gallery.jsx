@@ -51,7 +51,7 @@ const Gallery = ({ items = [], onSelect }) => {
                   {artwork.category}
                 </span>
                 <motion.div
-                  className="bg-cyan-400 text-white p-2.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="bg-red-500 text-white p-2.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
                   whileHover={{ scale: 1.1, rotate: 45 }}
                 >
                   <ArrowUpRight className="w-4 h-4" />
@@ -68,7 +68,7 @@ const Gallery = ({ items = [], onSelect }) => {
                     View Project
                   </p>
                   <div className="flex-1 h-px bg-white/30" />
-                  <Heart className="w-4 h-4 text-white hover:text-cyan-400 transition-colors" />
+                  <Heart className="w-4 h-4 text-white hover:text-red-500 transition-colors" />
                 </div>
               </div>
             </div>
@@ -77,14 +77,14 @@ const Gallery = ({ items = [], onSelect }) => {
             <div className="p-5 bg-white">
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="font-display font-bold text-black text-lg group-hover:text-cyan-500 transition-colors">
+                  <h4 className="font-display font-bold text-black text-lg group-hover:text-red-600 transition-colors">
                     {artwork.title}
                   </h4>
                   <p className="text-black/40 text-sm mt-1">
                     {artwork.category}
                   </p>
                 </div>
-                <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all">
+                <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-red-600 group-hover:border-red-600 transition-all">
                   <ArrowUpRight className="w-4 h-4 text-black/40 group-hover:text-white transition-colors" />
                 </div>
               </div>

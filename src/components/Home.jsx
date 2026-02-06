@@ -151,7 +151,7 @@ const Home = () => {
               disablePictureInPicture
               className="w-full h-full object-cover"
             >
-              <source src="/Hero_Video.mp4" type="video/mp4" />
+              <source src="/Hero_Video.webm" type="video/webm" />
             </video>
 
             <motion.div
@@ -165,18 +165,18 @@ const Home = () => {
               className="absolute inset-0 flex flex-col items-center justify-center md:pt-32 text-white pointer-events-none text-center z-10 p-6"
             >
               <div className="flex items-center gap-4 mb-4 md:mb-8">
-                <span className="w-8 md:w-12 h-px bg-linear-to-r from-transparent via-cyan-400 to-transparent"></span>
+                <span className="w-8 md:w-12 h-px bg-linear-to-r from-transparent via-red-500 to-transparent"></span>
                 <span className="text-[8px] md:text-[11px] uppercase tracking-[0.35em] text-white/70 font-bold">
                   Media Pioneer
                 </span>
-                <span className="w-8 md:w-12 h-px bg-linear-to-r from-transparent via-cyan-400 to-transparent"></span>
+                <span className="w-8 md:w-12 h-px bg-linear-to-r from-transparent via-red-500 to-transparent"></span>
               </div>
 
               <h1 className="font-display font-black leading-[0.9] tracking-tight">
                 <span className="block text-[15vw] md:text-[14vw] lg:text-[11vw] text-white">
                   ANIL
                 </span>
-                <span className="block text-[15vw] md:text-[14vw] lg:text-[11vw] bg-clip-text text-transparent bg-linear-to-r from-[#004752] via-[#00e5ff] to-[#00414d]">
+                <span className="block text-[15vw] md:text-[14vw] lg:text-[11vw] bg-clip-text text-transparent bg-linear-to-r from-[#450a0a] via-[#ef4444] to-[#450a0a]">
                   AYROOR
                 </span>
               </h1>

@@ -5,10 +5,10 @@ import { motion, useTransform, AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Background/Text color logic - Updated to branded cyan/blue
+  // Background/Text color logic - Updated to branded Red
   const bgColor = "rgba(0,0,0,0)";
-  const textColor = "#00e5ff"; // Branded Cyan
-  const borderColor = "rgba(0, 229, 255, 0.2)";
+  const textColor = "#ef4444"; // Branded Red
+  const borderColor = "rgba(239, 68, 68, 0.2)";
 
   return (
     <>
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.3]"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(0, 229, 255, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 229, 255, 0.08) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, rgba(239, 68, 68, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(239, 68, 68, 0.08) 1px, transparent 1px)`,
             backgroundSize: "32px 32px",
           }}
         />
@@ -44,7 +44,7 @@ const Navbar = () => {
           <motion.div
             onClick={() => setMenuOpen(!menuOpen)}
             style={{ borderColor: borderColor }}
-            className="w-10 h-10 border rounded-full flex flex-col items-center justify-center gap-1 cursor-pointer group hover:bg-cyan-500/10 transition-colors"
+            className="w-10 h-10 border rounded-full flex flex-col items-center justify-center gap-1 cursor-pointer group hover:bg-red-500/10 transition-colors"
           >
             <motion.span
               style={{ backgroundColor: textColor }}
@@ -71,7 +71,7 @@ const Navbar = () => {
             <div
               className="absolute inset-0 pointer-events-none opacity-[0.1]"
               style={{
-                backgroundImage: `linear-gradient(to right, rgba(0, 229, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 229, 255, 0.1) 1px, transparent 1px)`,
+                backgroundImage: `linear-gradient(to right, rgba(239, 68, 68, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(239, 68, 68, 0.1) 1px, transparent 1px)`,
                 backgroundSize: "40px 40px",
               }}
             />
@@ -96,7 +96,7 @@ const Navbar = () => {
                     onClick={() => setMenuOpen(false)}
                     className="group relative flex items-center justify-center text-center"
                   >
-                    <span className="text-5xl md:text-[8vh] font-display font-black uppercase text-white hover:text-cyan-400 transition-all duration-300">
+                    <span className="text-5xl md:text-[8vh] font-display font-black uppercase text-white hover:text-red-500 transition-all duration-300">
                       {item.name}
                     </span>
                   </Link>
@@ -107,7 +107,7 @@ const Navbar = () => {
             {/* Close Button for Menu */}
             <motion.button
               onClick={() => setMenuOpen(false)}
-              className="absolute top-12 right-12 w-16 h-16 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-cyan-400 hover:border-cyan-400 transition-all group"
+              className="absolute top-12 right-12 w-16 h-16 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-red-500 hover:border-red-500 transition-all group"
             >
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase group-hover:scale-110 transition-transform">
                 Close

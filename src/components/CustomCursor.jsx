@@ -10,6 +10,16 @@ const CustomCursor = () => {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const moveCursor = (e) => {
@@ -39,6 +49,8 @@ const CustomCursor = () => {
     };
   }, [cursorX, cursorY]);
 
+  if (isMobile) return null;
+
   return (
     <>
       <motion.div
@@ -67,7 +79,7 @@ const CustomCursor = () => {
           translateY: 14,
         }}
       >
-        <div className="w-1 h-1 bg-skyblue-500 rounded-full" />
+        <div className="w-1 h-1 bg-red-500 rounded-full" />
       </motion.div>
     </>
   );

@@ -74,14 +74,14 @@ const GrowthStory = () => {
         >
           <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-6">
-              <span className="w-12 h-px bg-cyan-500"></span>
-              <span className="text-xs uppercase tracking-[0.4em] text-cyan-600 font-bold">
+              <span className="w-12 h-px bg-red-600"></span>
+              <span className="text-xs uppercase tracking-[0.4em] text-red-700 font-bold">
                 Career Journey
               </span>
             </div>
             <h2 className="text-6xl md:text-[7vw] font-display font-black leading-[0.9] tracking-tighter uppercase text-black">
               THE <br />
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-[#003d47] via-[#00e5ff] to-[#003d47]">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-[#450a0a] via-[#ef4444] to-[#450a0a]">
                 GROWTH
               </span>{" "}
               <br />
@@ -99,9 +99,9 @@ const GrowthStory = () => {
             >
               <span className="relative">
                 Explore Awards
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-600 group-hover:w-full transition-all duration-300"></span>
               </span>
-              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-500">
+              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -134,16 +134,16 @@ const GrowthStory = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: idx * 0.15 }}
               whileHover={{ y: -10 }}
-              className="group relative p-8 md:p-10 bg-neutral-50 rounded-[40px] border border-transparent hover:border-cyan-500/20 transition-all duration-500 overflow-hidden"
+              className="group relative p-8 md:p-10 bg-neutral-50 rounded-[40px] border border-transparent hover:border-red-600/20 transition-all duration-500 overflow-hidden"
             >
               {/* Year Bubble */}
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-xl mb-8 group-hover:bg-cyan-500 group-hover:scale-110 transition-all duration-500">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-xl mb-8 group-hover:bg-red-600 group-hover:scale-110 transition-all duration-500">
                 <span className="text-black font-display font-black text-sm group-hover:text-white">
                   {item.year}
                 </span>
               </div>
 
-              <h3 className="text-3xl font-display font-black text-black uppercase mb-4 tracking-tight group-hover:text-cyan-600 transition-colors">
+              <h3 className="text-3xl font-display font-black text-black uppercase mb-4 tracking-tight group-hover:text-red-700 transition-colors">
                 {item.title}
               </h3>
               <p className="text-black/50 leading-relaxed font-light text-sm md:text-base group-hover:text-black/80 transition-colors">
@@ -151,7 +151,7 @@ const GrowthStory = () => {
               </p>
 
               {/* Decorative Card Detail */}
-              <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-cyan-500/5 blur-3xl rounded-full group-hover:bg-cyan-500/10 transition-all duration-700"></div>
+              <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-red-600/5 blur-3xl rounded-full group-hover:bg-red-600/10 transition-all duration-700"></div>
             </motion.div>
           ))}
         </div>
@@ -169,7 +169,7 @@ const GrowthStory = () => {
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent"></div>
             <div className="absolute bottom-12 left-12">
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-cyan-400 mb-2 block">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-red-500 mb-2 block">
                 Foundational Value
               </span>
               <h4 className="text-4xl font-display font-black text-white uppercase italic">
@@ -181,9 +181,9 @@ const GrowthStory = () => {
           <div className="md:col-span-5 space-y-8">
             <h4 className="text-4xl md:text-5xl font-display font-black text-black uppercase leading-tight">
               A LEGACY <br />
-              OF <span className="text-cyan-600">TRUST.</span>
+              OF <span className="text-red-700">TRUST.</span>
             </h4>
-            <div className="w-20 h-1.5 bg-cyan-500 rounded-full"></div>
+            <div className="w-20 h-1.5 bg-red-600 rounded-full"></div>
             <p className="text-black/70 text-lg leading-relaxed font-light">
               We believe that true growth is measured by the trust our audience
               places in us. Every frame we broadcast is a testament to our
@@ -194,7 +194,7 @@ const GrowthStory = () => {
               className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-black group"
             >
               <span>Explore Awards</span>
-              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-500">
+              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

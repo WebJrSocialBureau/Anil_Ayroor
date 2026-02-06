@@ -32,11 +32,11 @@ const SectionReveal = ({ children }) => {
           style={{ scale: textScale, opacity: textOpacity }}
           className="relative flex flex-col items-center"
         >
-          <span className="text-cyan-500/30 text-[10px] font-bold tracking-[2em] uppercase mb-4">
+          <span className="text-red-500/30 text-[10px] font-bold tracking-[2em] uppercase mb-4">
             Curated Showcase
           </span>
           <h2 className="text-white text-[15vw] md:text-[12vw] font-display font-black leading-none uppercase tracking-tighter">
-            PIONEER<span className="text-cyan-400">.</span>
+            PIONEER<span className="text-red-500">.</span>
           </h2>
         </motion.div>
 
@@ -46,7 +46,7 @@ const SectionReveal = ({ children }) => {
             className="w-full h-full"
             style={{
               backgroundImage:
-                "linear-gradient(to right, #00e5ff 1px, transparent 1px), linear-gradient(to bottom, #00e5ff 1px, transparent 1px)",
+                "linear-gradient(to right, #ef4444 1px, transparent 1px), linear-gradient(to bottom, #ef4444 1px, transparent 1px)",
               backgroundSize: "80px 80px",
             }}
           />
