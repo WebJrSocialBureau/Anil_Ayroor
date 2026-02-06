@@ -67,10 +67,11 @@ const About = () => {
 
           <div className="space-y-8 md:space-y-10 text-lg md:text-2xl font-light leading-relaxed text-black/60 max-w-2xl">
             <p className="first-letter:text-5xl md:first-letter:text-7xl first-letter:font-display first-letter:font-black first-letter:text-black first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8]">
-              <span className="font-bold text-black">Anil Ayroor</span> is a
-              distinguished visionary in Malayalam media. With a career spanning
-              decades of integrity and innovation, he continues to redefine the
-              boundaries of broadcast journalism and digital storytelling.
+              <span className="font-bold text-black">Anil Ayroor</span> stands
+              at the forefront of India's media revolution. With over three
+              decades of transformative leadership, he has reshaped how millions
+              experience news and entertainment, pioneering technologies from AR
+              and VR to building channels that compete on a national stage.
             </p>
 
             <motion.div
@@ -81,14 +82,15 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="font-serif-elegant italic text-xl md:text-3xl text-black/80 leading-snug">
-                "Big TV Malayalam is not just a channel; it's a paradigm shift
-                where the journalists who craft the news are also the ones who
-                own the mission."
+                "We aspire to build institutions that inspire quiet
+                confidence—where families speak of us with pride and trust. Join
+                us—not just to learn, but to grow, to lead, and to shape the
+                future with purpose."
               </p>
               <div className="mt-6 flex items-center gap-4">
                 <div className="w-8 h-px bg-black/10"></div>
                 <span className="text-sm uppercase tracking-widest text-black/40">
-                  Launch of Big TV 2026
+                  Vision & Philosophy
                 </span>
               </div>
             </motion.div>
@@ -134,7 +136,7 @@ const About = () => {
             className="relative w-full h-[450px] md:h-[750px] overflow-hidden rounded-[30px] md:rounded-[40px] shadow-2xl border border-black/5"
           >
             <img
-              src="/about_image.jpg"
+              src="/about_image.png"
               alt="Anil Ayroor"
               className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-1000 scale-110"
             />

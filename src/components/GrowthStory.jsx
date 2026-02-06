@@ -22,24 +22,34 @@ const GrowthStory = () => {
 
   const milestones = [
     {
-      year: "2010",
-      title: "The Beginning",
-      desc: "Starting as a passionate journalist with a vision to redefine Malayalam media.",
+      year: "1995",
+      title: "Foundations",
+      desc: "Producer / Editorial at Asianet & Raj TV. Built foundational expertise in news and programming.",
+    },
+    {
+      year: "2011",
+      title: "Showmanship",
+      desc: "Chief Program Producer at Mazhavil Manorama. Developed high-impact reality and prime-time shows.",
+    },
+    {
+      year: "2015",
+      title: "Innovation",
+      desc: "Group COO at Flowers TV & 24 News. Spearheaded the transformation into top-rated channels.",
     },
     {
       year: "2018",
-      title: "Media Influence",
-      desc: "Taking leadership roles and shaping the narrative of prime-time news.",
+      title: "Strategy",
+      desc: "Chief Channel Officer at Zee Keralam. Positioned the channel as a formidable market competitor.",
     },
     {
-      year: "2023",
-      title: "The Shift",
-      desc: "Leading Reporter TV as President and introducing a culture of excellence.",
+      year: "2021",
+      title: "Transformation",
+      desc: "Network President at Reporter TV. Introduced Asia's most advanced AR/VR news studio.",
     },
     {
-      year: "2026",
-      title: "BIG TV Era",
-      desc: "Launching a revolutionary staff-owned satellite news channel.",
+      year: "2024",
+      title: "Revolution",
+      desc: "MD & Founder of Big TV Malayalam. Launching a next-gen hybrid platform bridging digital & broadcast.",
     },
   ];
 
@@ -66,7 +76,7 @@ const GrowthStory = () => {
             <div className="flex items-center gap-4 mb-6">
               <span className="w-12 h-px bg-cyan-500"></span>
               <span className="text-xs uppercase tracking-[0.4em] text-cyan-600 font-bold">
-                Journey
+                Career Journey
               </span>
             </div>
             <h2 className="text-6xl md:text-[7vw] font-display font-black leading-[0.9] tracking-tighter uppercase text-black">
@@ -80,8 +90,8 @@ const GrowthStory = () => {
           </div>
           <div className="md:max-w-xs">
             <p className="text-black/60 text-lg leading-relaxed font-light mb-8">
-              A decade of breaking barriers and setting new benchmarks in the
-              world of broadcasting and digital media.
+              A testament to visionary leadership and operational excellence
+              across India's most prominent broadcasting networks.
             </p>
             <Link
               to="/awards"
@@ -112,7 +122,7 @@ const GrowthStory = () => {
         </motion.div>
 
         {/* Story Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 relative">
           {/* Vertical Connecting Line (Hidden on mobile) */}
           <div className="absolute top-1/2 left-0 w-full h-px bg-black/5 hidden lg:block -translate-y-1/2"></div>
 
@@ -153,7 +163,7 @@ const GrowthStory = () => {
         >
           <div className="md:col-span-7 rounded-[48px] overflow-hidden relative h-[400px] md:h-[550px] group shadow-2xl">
             <img
-              src="/legacy_trust.jpg"
+              src="/legacy_trust.png"
               alt="Growth Narrative"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
             />

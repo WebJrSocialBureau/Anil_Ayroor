@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const ExperienceBridge = () => {
   const partners = [
-    "BIG TV",
-    "ASIANET",
-    "MEDIAONE",
-    "NEWS18",
-    "STAR NETWORK",
-    "ZEE MEDIA",
+    "BIG TV MALAYALAM",
+    "REPORTER TV",
+    "ZEE KERALAM",
     "FLOWERS TV",
-    "AMRITA TV",
+    "MAZHAVIL MANORAMA",
+    "ASIANET",
+    "RAJ TV",
+    "KERALA STARTUP MISSION",
   ];
 
   return (
@@ -25,7 +25,7 @@ const ExperienceBridge = () => {
           viewport={{ once: true }}
           className="text-cyan-500 font-mono text-xs uppercase tracking-[0.5em] mb-4 block"
         >
-          Global_Influence
+          GLOBAL_INFLUENCE
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -57,10 +57,10 @@ const ExperienceBridge = () => {
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-6 mt-32 grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
         {[
-          { label: "NETWORKS_MANAGED", value: "12+" },
-          { label: "CONTENT_HOURS", value: "50k+" },
-          { label: "GLOBAL_AWARDS", value: "25+" },
-          { label: "MEDIA_LEADERSHIP", value: "20Y+" },
+          { label: "MEDIA_EXCELLENCE", value: "30Y+" },
+          { label: "CHANNELS_LAUNCHED", value: "5+" },
+          { label: "NETWORKS_LED", value: "7+" },
+          { label: "AWARDS_RECOGNITION", value: "MANY" },
         ].map((stat, idx) => (
           <motion.div
             key={stat.label}

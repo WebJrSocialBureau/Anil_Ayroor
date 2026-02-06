@@ -79,8 +79,8 @@ const Navbar = () => {
             <nav className="flex flex-col items-center gap-6 relative z-10">
               {[
                 { name: "Home", path: "/" },
-                { name: "Awards", path: "/awards" },
-                { name: "Events", path: "/events" },
+                // { name: "Awards", path: "/awards" },
+                // { name: "Events", path: "/events" },
                 { name: "Gallery", path: "/gallery" },
                 { name: "About", path: "/about" },
                 { name: "Contact", path: "/contact" },

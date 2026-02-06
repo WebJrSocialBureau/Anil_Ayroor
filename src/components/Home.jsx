@@ -72,20 +72,20 @@ const Home = () => {
 
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200",
-      alt: "Mountain Lake",
+      src: "/hero_image1.png",
+      alt: "Anil Ayroor Hero 1",
     },
     {
-      src: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=1200",
-      alt: "Landscape",
+      src: "/hero_image2.png",
+      alt: "Anil Ayroor Hero 2",
     },
     {
-      src: "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?auto=format&fit=crop&q=80&w=1200",
-      alt: "Sunset Horizon",
+      src: "/hero_image3.png",
+      alt: "Anil Ayroor Hero 3",
     },
     {
-      src: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&q=80&w=1200",
-      alt: "Mountain Range",
+      src: "/hero_image4.png",
+      alt: "Anil Ayroor Hero 4",
     },
   ];
 

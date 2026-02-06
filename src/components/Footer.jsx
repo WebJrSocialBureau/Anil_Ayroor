@@ -51,14 +51,14 @@ const Footer = () => {
             </motion.h2>
             <div className="mt-8 md:mt-12 flex flex-col gap-4 md:gap-6">
               <a
-                href="mailto:contact@anilayroor.com"
+                href="mailto:anil@time7.in"
                 className="group flex items-center gap-4 md:gap-6"
               >
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#00e5ff] group-hover:border-[#00e5ff] transition-all duration-500 shrink-0">
                   <Mail className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-black transition-colors" />
                 </div>
                 <span className="text-lg md:text-xl lg:text-2xl font-display font-bold text-white/60 group-hover:text-white transition-colors tracking-tight break-all">
-                  contact@anilayroor.com
+                  anil@time7.in
                 </span>
               </a>
               <div className="flex items-center gap-4 md:gap-6">
@@ -126,12 +126,6 @@ const Footer = () => {
               © 2026 ANIL AYROOR. ALL RIGHTS RESERVED.
             </span>
             <div className="hidden md:block w-px h-3 bg-white/10"></div>
-            <a
-              href="#"
-              className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors font-bold"
-            >
-              Privacy Policy
-            </a>
           </div>
 
           {/* Scroll to Top */}
