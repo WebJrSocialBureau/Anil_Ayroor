@@ -155,6 +155,7 @@ const AwardSection = ({ award, progress, range }) => {
               src={award.image}
               alt={award.title}
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-cyan-500/10 mix-blend-overlay" />
 

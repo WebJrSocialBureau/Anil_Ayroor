@@ -93,31 +93,6 @@ const GrowthStory = () => {
               A testament to visionary leadership and operational excellence
               across India's most prominent broadcasting networks.
             </p>
-            <Link
-              to="/awards"
-              className="group flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-black"
-            >
-              <span className="relative">
-                Explore Awards
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-600 group-hover:w-full transition-all duration-300"></span>
-              </span>
-              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-4 h-4 group-hover:text-white transition-colors"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                  />
-                </svg>
-              </div>
-            </Link>
           </div>
         </motion.div>
 
@@ -166,6 +141,7 @@ const GrowthStory = () => {
               src="/legacy_trust.png"
               alt="Growth Narrative"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent"></div>
             <div className="absolute bottom-12 left-12">
@@ -189,28 +165,6 @@ const GrowthStory = () => {
               places in us. Every frame we broadcast is a testament to our
               commitment to accuracy and meaningful storytelling.
             </p>
-            <Link
-              to="/awards"
-              className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-black group"
-            >
-              <span>Explore Awards</span>
-              <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-4 h-4 group-hover:text-white transition-colors"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                  />
-                </svg>
-              </div>
-            </Link>
           </div>
         </motion.div>
       </div>

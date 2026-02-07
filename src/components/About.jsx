@@ -139,9 +139,10 @@ const About = () => {
               src="/about_image.png"
               alt="Anil Ayroor"
               className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-1000 scale-110"
+              loading="lazy"
             />
             {/* Artistic Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-80"></div>
             <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 blur-[80px] rounded-full"></div>
 
             {/* Visual Callouts */}

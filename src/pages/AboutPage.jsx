@@ -238,6 +238,7 @@ const AboutPage = () => {
           <img
             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
             className="w-full h-full object-cover grayscale opacity-30"
+            loading="lazy"
           />
         </motion.div>
 

@@ -107,6 +107,7 @@ const Home = () => {
                 src={images[0].src}
                 alt={images[0].alt}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="absolute bottom-[8%] left-[12%] w-[22%] aspect-[1.5] rounded-[20px] overflow-hidden shadow-xl">
@@ -114,6 +115,7 @@ const Home = () => {
                 src={images[1].src}
                 alt={images[1].alt}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="absolute top-[12%] right-[5%] w-[24%] aspect-[1.5] rounded-[16px] overflow-hidden shadow-xl">
@@ -121,6 +123,7 @@ const Home = () => {
                 src={images[2].src}
                 alt={images[2].alt}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="absolute bottom-[8%] right-[8%] w-[26%] aspect-[1.4] rounded-[20px] overflow-hidden shadow-xl">
@@ -128,6 +131,7 @@ const Home = () => {
                 src={images[3].src}
                 alt={images[3].alt}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </motion.div>
@@ -158,7 +162,7 @@ const Home = () => {
               style={{ opacity: overlayOpacity }}
               className="absolute inset-0 bg-black pointer-events-none z-1"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80 pointer-events-none z-2" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/80 pointer-events-none z-2" />
 
             <motion.div
               style={{ opacity: titleOpacity, scale: titleScale }}
@@ -243,6 +247,7 @@ const Home = () => {
                     src={img.src}
                     alt={img.alt}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </motion.div>
               ))}

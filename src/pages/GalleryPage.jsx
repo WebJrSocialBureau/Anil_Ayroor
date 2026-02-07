@@ -166,6 +166,7 @@ const GalleryPage = ({ items = [] }) => {
                   src={selectedImage.url}
                   alt={selectedImage.title}
                   className="max-w-full max-h-full object-contain rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+                  loading="lazy"
                 />
 
                 {/* Navigation Arrows */}
@@ -289,6 +290,7 @@ const GalleryItem = ({ item, index, onExpand }) => {
                 ? "aspect-video"
                 : "aspect-square"
           } object-cover opacity-80 group-hover:opacity-100`}
+          loading="lazy"
         />
 
         {/* Simple Hover Overlay */}
