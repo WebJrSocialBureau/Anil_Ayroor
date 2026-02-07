@@ -145,19 +145,20 @@ const About = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 blur-[80px] rounded-full"></div>
 
             {/* Visual Callouts */}
-            <div className="absolute bottom-12 left-12 right-12">
+            <div className="absolute bottom-8 left-0 right-0 px-6 flex justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
+                className="w-full flex justify-center"
               >
-                <div className="bg-black/40 backdrop-blur-md border border-white/10 p-6 rounded-2xl inline-block">
-                  <span className="text-black/3 uppercase tracking-[0.4em] mb-4 text-[10px] font-bold block">
+                <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-5 md:p-10 px-8 md:px-16 rounded-3xl inline-block min-w-[240px] md:min-w-[450px] text-center shadow-2xl">
+                  <span className="text-red-500 uppercase tracking-[0.4em] mb-3 text-[8px] md:text-[10px] font-bold block">
                     Industry Leader
                   </span>
-                  <h3 className="text-3xl font-display font-black text-white uppercase italic">
-                    Establishment 2026
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-white uppercase italic leading-none">
+                    Anil Ayroor
                   </h3>
                 </div>
               </motion.div>
