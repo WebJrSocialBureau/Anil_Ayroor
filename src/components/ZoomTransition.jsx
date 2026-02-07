@@ -33,13 +33,14 @@ const ZoomTransition = ({ children }) => {
           className="relative w-[80vw] md:w-[60vw] aspect-video"
         >
           <video
-            src="/zoom_effect.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover rounded-[40px] shadow-2xl grayscale"
-          />
+            className="w-full h-full object-cover rounded-[40px] shadow-2xl"
+          >
+            <source src="/zoom_effect.webm" type="video/webm" />
+          </video>
           <div className="absolute inset-0 bg-linear-to-t from-red-500/20 to-transparent rounded-[40px] mix-blend-overlay"></div>
 
           <div className="absolute inset-0 flex items-center justify-center">

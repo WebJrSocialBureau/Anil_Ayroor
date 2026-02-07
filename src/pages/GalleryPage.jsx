@@ -81,7 +81,7 @@ const GalleryPage = ({ items = [] }) => {
           </motion.div>
 
           {/* Category Filter Bar */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
@@ -106,7 +106,7 @@ const GalleryPage = ({ items = [] }) => {
                 )}
               </button>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Dynamic Background Elements */}
@@ -291,40 +291,8 @@ const GalleryItem = ({ item, index, onExpand }) => {
           } object-cover opacity-80 group-hover:opacity-100`}
         />
 
-        {/* Overlay Grid */}
-        <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-20 transition-opacity duration-700">
-          <div
-            className="w-full h-full"
-            style={{
-              backgroundImage: `linear-gradient(to right, red 1px, transparent 1px), linear-gradient(to bottom, red 1px, transparent 1px)`,
-              backgroundSize: "20px 20px",
-            }}
-          />
-        </div>
-
-        {/* Cinematic Overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500 flex flex-col justify-end p-8">
-          <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-red-500 font-mono text-[9px] uppercase tracking-[0.3em] mb-2 block">
-              {item.category}
-            </span>
-            <h3 className="text-2xl font-display font-black uppercase italic text-white mb-2">
-              {item.title}
-            </h3>
-            <div className="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">
-                Expand_Viewer
-              </span>
-              <div className="flex-1 h-px bg-red-600/30" />
-              <Maximize2 className="w-4 h-4 text-red-600" />
-            </div>
-          </div>
-        </div>
-
-        {/* Branded Corner */}
-        <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="w-8 h-8 border-t border-r border-red-600/50" />
-        </div>
+        {/* Simple Hover Overlay */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
     </motion.div>
   );

@@ -17,17 +17,17 @@ const ContactPage = () => {
   });
 
   // Scene 1 & 2: Hero & Form (0 to 0.4)
-  const heroOpacity = useTransform(smoothProgress, [0, 0.4, 0.6], [1, 1, 0]);
-  const heroScale = useTransform(smoothProgress, [0, 0.6], [1, 1.1]);
-  const textX1 = useTransform(smoothProgress, [0, 0.6], ["0%", "-20%"]);
-  const textX2 = useTransform(smoothProgress, [0, 0.6], ["0%", "20%"]);
+  const heroOpacity = useTransform(smoothProgress, [0, 0.2, 0.35], [1, 1, 0]);
+  const heroScale = useTransform(smoothProgress, [0, 0.35], [1, 1.1]);
+  const textX1 = useTransform(smoothProgress, [0, 0.35], ["0%", "-20%"]);
+  const textX2 = useTransform(smoothProgress, [0, 0.35], ["0%", "20%"]);
 
   const contentOpacity = useTransform(
     smoothProgress,
-    [0.4, 0.5, 0.9, 1],
+    [0.25, 0.35, 0.85, 0.95],
     [0, 1, 1, 0],
   );
-  const contentY = useTransform(smoothProgress, [0.4, 0.5], [100, 0]);
+  const contentY = useTransform(smoothProgress, [0.25, 0.35], [100, 0]);
 
   const contactOptions = [
     { label: "Phone", value: "+91 94474 81001", id: "01" },
@@ -38,7 +38,7 @@ const ContactPage = () => {
   return (
     <div
       ref={containerRef}
-      className="bg-black text-white min-h-[250vh] relative"
+      className="bg-black text-white min-h-[400vh] relative"
     >
       <Navbar />
 
@@ -138,7 +138,7 @@ const ContactPage = () => {
       </section>
 
       {/* FOOTER BUFFER */}
-      <div className="h-[50vh] bg-black" />
+      <div className="h-[100vh] bg-black" />
       <Footer />
     </div>
   );
