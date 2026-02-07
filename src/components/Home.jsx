@@ -76,7 +76,7 @@ const Home = () => {
       alt: "Anil Ayroor Hero 1",
     },
     {
-      src: "/hero_image2.png",
+      src: "/hero_image2.jpeg",
       alt: "Anil Ayroor Hero 2",
     },
     {

@@ -111,6 +111,32 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* SocialBureau Credit Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="mb-16 md:mb-24"
+        >
+          <div className="max-w-3xl border-l border-red-500/30 pl-6 md:pl-10 py-2">
+            <p className="text-white/40 text-sm sm:text-base md:text-lg font-light leading-relaxed">
+              <a
+                style={{ fontFamily: "MyFont, sans-serif" }}
+                href="https://socialbureau.in"
+                className="text-white hover:text-red-500 transition-colors duration-300 font-bold tracking-tight"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Social<span className="text-red-600">B</span>ureau
+              </a>
+              , based in Kochi, Kerala, helps SaaS platforms, cloud providers,
+              and technology companies achieve measurable growth through
+              developer-centric strategies.
+            </p>
+          </div>
+        </motion.div>
+
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
