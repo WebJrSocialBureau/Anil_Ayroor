@@ -36,7 +36,7 @@ const Navbar = () => {
             to="/"
             className="text-xl font-display font-black tracking-tighter"
           >
-            ANIL.AYROOR
+            ANIL AYROOR
           </Link>
         </motion.div>
 

@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 
+/**
+ * CustomCursor Component
+ *
+ * Provides a highly customizable, animated cursor experience using Framer Motion.
+ * It features a delayed 'spring' outer circle and a precise inner dot.
+ * Automatically hides on mobile/touch devices.
+ */
 const CustomCursor = () => {
+  // Motion values for smooth coordinate tracking
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
+  // Spring physics configuration for the outer ring's trailing effect
   const springConfig = { damping: 25, stiffness: 700 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
@@ -12,6 +21,7 @@ const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Device detection to disable on small screens/touch
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -21,6 +31,7 @@ const CustomCursor = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Event listeners for mouse tracking and interaction detection
   useEffect(() => {
     const moveCursor = (e) => {
       cursorX.set(e.clientX - 16);
@@ -28,6 +39,7 @@ const CustomCursor = () => {
     };
 
     const handleMouseOver = (e) => {
+      // Scale up when hovering over interactive elements
       if (
         e.target.tagName === "A" ||
         e.target.tagName === "BUTTON" ||
@@ -49,10 +61,12 @@ const CustomCursor = () => {
     };
   }, [cursorX, cursorY]);
 
+  // Don't render if on mobile or disabled
   if (isMobile) return null;
 
   return (
     <>
+      {/* Outer Glow/Ring - Follows with spring delay */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
         style={{
@@ -70,6 +84,7 @@ const CustomCursor = () => {
           className={`w-6 h-6 rounded-full bg-yellow-500 opacity-80 backdrop-blur-sm`}
         />
       </motion.div>
+      {/* Inner Dot - Immediate position tracking */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{

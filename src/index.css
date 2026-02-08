@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  cursor: none; /* Hide default cursor for custom cursor */
+  /* cursor: none; Hide default cursor for custom cursor */
 }
 
 /* Custom Scrollbar */

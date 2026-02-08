@@ -30,9 +30,8 @@ const ContactPage = () => {
   const contentY = useTransform(smoothProgress, [0.25, 0.35], [100, 0]);
 
   const contactOptions = [
-    { label: "Phone", value: "+91 94474 81001", id: "01" },
     { label: "Email", value: "anil@time7.in", id: "02" },
-    { label: "Location", value: "Kochi, Kerala, India", id: "03" },
+    { label: "Location", value: "TIME7 CONSULTING SOLUTIONS (OPC) PRIVATE LIMITED, 27 (56/772) FLAT NO-PH 1, 16 TH FLOOR, RDS AVENUE, Panampilly Nagar, Ernakulam, Ernakulam- 682036, Kerala", id: "03" },
   ];
 
   return (

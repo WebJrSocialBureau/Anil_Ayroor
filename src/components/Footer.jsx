@@ -347,7 +347,7 @@ const Footer = () => {
         >
           <div className="relative mb-6 w-fit">
             <div className="absolute inset-0 bg-red-500/20 blur-3xl rounded-full"></div>
-            <a href="bigtv24x7.com">
+            <a href="https://bigtv24x7.com">
               <img
                 src="/logo/LOGO (2).png"
                 alt="Ayroor Logo"

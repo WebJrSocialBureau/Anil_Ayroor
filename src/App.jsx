@@ -8,7 +8,7 @@ import {
 import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
 import LoadingScreen from "./components/LoadingScreen";
-import CustomCursor from "./components/CustomCursor";
+// import CustomCursor from "./components/CustomCursor";
 import LandingPage from "./components/LandingPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -81,7 +81,7 @@ const galleryItems = [
     id: 8,
     title: "Media Perspective",
     category: "Heritage",
-    url: "/gallery/gallery8.png",
+    url: "/anilayroor.jpg",
     aspectRatio: "portrait",
     desc: "Deep diving into the heritage of journalistic excellence and media ethics.",
   },
@@ -187,7 +187,7 @@ function App() {
   return (
     <Router>
       <div className="antialiased text-black bg-white min-h-screen">
-        <CustomCursor />
+        {/* <CustomCursor /> */}
 
         {isLoading ? (
           <LoadingScreen onComplete={() => setIsLoading(false)} />

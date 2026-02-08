@@ -112,7 +112,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-left">
             <div className="space-y-4 md:space-y-6">
               <span className="text-red-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
-                Integrity_Log.01
+                Integrity
               </span>
               <p className="text-white/60 text-base md:text-lg leading-relaxed font-light">
                 For over three decades, Anil Ayroor has been the steady pulse of
@@ -122,7 +122,7 @@ const AboutPage = () => {
             </div>
             <div className="space-y-4 md:space-y-6">
               <span className="text-red-500 font-mono text-[10px] md:text-xs uppercase tracking-widest">
-                Innovation_Log.02
+                Innovation
               </span>
               <p className="text-white/60 text-base md:text-lg leading-relaxed font-light">
                 Now, with Big TV Malayalam, he introduces a staff-owned model
