@@ -12,6 +12,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
+
+// Request Logger
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.originalUrl} - [${new Date().toISOString()}]`);
+  next();
+});
+
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
@@ -30,12 +37,18 @@ app.use('/api/v1/blogs', blogRoutes);
 // Database connection
 const DB = process.env.MONGODB_URI;
 
-mongoose.connect(DB)
-  .then(() => console.log('DB connection successful!'))
-  .catch(err => {
-    console.error('DB connection error details:');
-    console.error(err.message);
-  });
+if (!DB) {
+  console.error('CRITICAL: MONGODB_URI is not defined in environment variables!');
+} else {
+  console.log('Attempting to connect to MongoDB...');
+  mongoose.connect(DB)
+    .then(() => console.log('DB connection successful!'))
+    .catch(err => {
+      console.error('DB_CONNECTION_ERROR:');
+      console.error('Message:', err.message);
+      console.error('Stack:', err.stack);
+    });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
