@@ -1,9 +1,6 @@
-// Use current window location to determine if we are in production
-const isProduction = window.location.hostname !== 'localhost';
-
-export const BASE_URL = isProduction 
-  ? 'https://anil-ayroor.onrender.com' 
-  : (import.meta.env.VITE_API_URL || 'http://localhost:5000');
+// Use environment variable first, then fallback to production link or localhost
+export const BASE_URL = import.meta.env.VITE_API_URL || 
+  (window.location.hostname !== 'localhost' ? 'https://anil-ayroor.onrender.com' : 'http://localhost:5000');
 const API_URL = `${BASE_URL}/api/v1`;
 
 const getAuthHeaders = () => {
