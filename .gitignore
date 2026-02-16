@@ -1,0 +1,14 @@
+# Projects
+node_modules/
+dist/
+.env
+.DS_Store
+
+# Backend specific
+server/node_modules/
+server/.env
+server/public/uploads/
+
+# Frontend specific
+client/node_modules/
+client/dist/
