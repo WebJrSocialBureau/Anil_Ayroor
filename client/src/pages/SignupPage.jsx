@@ -37,7 +37,7 @@ const SignupPage = () => {
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
       <SEO
-        title="Sign Up"
+        title="Admin Registration | Join the Network"
         description="Create an account to access administrative features on Anil Ayroor's website."
       />
       <Navbar />

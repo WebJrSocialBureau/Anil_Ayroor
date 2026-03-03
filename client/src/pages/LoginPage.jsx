@@ -36,7 +36,7 @@ const LoginPage = () => {
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
       <SEO
-        title="Admin Login"
+        title="Admin Login | Secure Portal"
         description="Secure login portal for Anil Ayroor's website administration."
       />
       <Navbar />

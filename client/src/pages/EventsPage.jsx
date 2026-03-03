@@ -10,7 +10,7 @@ const EventsPage = () => {
   return (
     <div className="bg-[#050505] text-white min-h-screen relative font-sans">
       <SEO
-        title="Events"
+        title="Events | Media Appearances & Global Summits"
         description="Stay updated with upcoming summits, webinars, and forums featuring Anil Ayroor. Join the conversation on the future of media."
       />
       <Navbar />
@@ -170,7 +170,7 @@ const EventItem = ({ event, index }) => {
         </div>
       </div>
 
-      <div className="space-y-4 mb-10 flex-grow">
+      <div className="space-y-4 mb-10 grow">
         <h3 className="text-2xl md:text-3xl font-display font-black uppercase italic leading-tight group-hover:text-red-400 transition-colors">
           {event.title}
         </h3>

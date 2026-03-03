@@ -11,7 +11,7 @@ const BlogPage = () => {
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
       <SEO
-        title="Journal"
+        title="Journal | Media Insights & Professional Reflections"
         description="Thoughts, insights, and stories from Anil Ayroor. Exploring the intersections of media, leadership, and innovation."
       />
       <Navbar />

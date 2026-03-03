@@ -12,7 +12,7 @@ const ContactPage = () => {
       className="bg-black text-white min-h-[400vh] relative"
     >
       <SEO
-        title="Contact"
+        title="Contact | Media Consulting & Collaborations"
         description="Get in touch with Anil Ayroor for collaborations, media inquiries, or professional consulting. Based in Kochi, Kerala."
       />
       <Navbar />
@@ -113,7 +113,7 @@ const ContactPage = () => {
       </section>
 
       {/* FOOTER BUFFER */}
-      <div className="h-[100vh] bg-black" />
+      <div className="h-screen bg-black" />
       <Footer />
     </div>
   );

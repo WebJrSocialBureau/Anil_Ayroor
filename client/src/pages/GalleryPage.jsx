@@ -13,7 +13,7 @@ const GalleryPage = ({ items = [] }) => {
       className="bg-[#050505] text-white min-h-screen relative font-sans overflow-x-hidden"
     >
       <SEO
-        title="Visual Archive"
+        title="Gallery | Media Productions & Newsroom Highlights"
         description="A curated showcase of iconic moments and prestigious highlights across the media landscape. A visual chronicle of Anil Ayroor's career."
       />
       <Navbar />

@@ -10,7 +10,10 @@ const SEO = ({
   schemaData,
 }) => {
   const siteName = "Anil Ayroor";
-  const fullTitle = title ? `${title} | ${siteName}` : siteName;
+  const fullTitle =
+    title && !title.includes(siteName)
+      ? `${title} | ${siteName}`
+      : title || siteName;
   const defaultDescription =
     "Official website of Anil Ayroor - Journalist, Media Professional, and Content Creator. Explore the latest insights, awards, and events.";
 

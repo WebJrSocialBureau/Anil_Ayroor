@@ -11,7 +11,7 @@ const BlogDetailPage = () => {
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
       <SEO
-        title={blog.title}
+        title={`${blog.title} | Anil Ayroor`}
         description={blog.excerpt}
         ogType="article"
         ogImage={

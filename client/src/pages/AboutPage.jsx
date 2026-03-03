@@ -13,7 +13,7 @@ const AboutPage = () => {
       className="bg-black text-white min-h-[700vh] relative"
     >
       <SEO
-        title="About"
+        title="About | 30+ Years of Media Leadership & Impact"
         description="Learn more about Anil Ayroor's journey in journalism, media production, and leadership. A career dedicated to storytelling and excellence."
       />
       <Navbar />

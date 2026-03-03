@@ -14,7 +14,7 @@ const LandingPage = ({ galleryItems }) => {
   return (
     <main className="w-full relative">
       <SEO
-        title="Home"
+        title="Journalist, Media Pioneer & Leadership Expert"
         description="Official website of Anil Ayroor - Journalist, Media Professional, and Content Creator. Explore the latest insights, awards, and events."
         schemaData={{
           "@context": "https://schema.org",

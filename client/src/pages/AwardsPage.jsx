@@ -13,7 +13,7 @@ const AwardsPage = () => {
       className="bg-[#050505] text-white min-h-[500vh] relative"
     >
       <SEO
-        title="Awards & Recognition"
+        title="Awards | Celebrating Excellence in Media"
         description="A list of prestigious awards and honors received by Anil Ayroor for his contributions to journalism and media."
       />
       <Navbar />

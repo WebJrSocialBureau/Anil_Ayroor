@@ -171,7 +171,7 @@ const AdminDashboard = () => {
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
       <SEO
-        title="Admin Dashboard"
+        title="Admin Dashboard | Manage Publications"
         description="Manage your publications and content with ease and precision."
       />
       <Navbar />
