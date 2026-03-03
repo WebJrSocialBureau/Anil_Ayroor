@@ -5,6 +5,7 @@ import { api } from "../utils/api";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useToast } from "../context/ToastContext";
+import SEO from "../components/SEO";
 
 const SignupPage = () => {
   const [name, setName] = useState("");
@@ -33,9 +34,12 @@ const SignupPage = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
+      <SEO
+        title="Sign Up"
+        description="Create an account to access administrative features on Anil Ayroor's website."
+      />
       <Navbar />
 
       <main className="pt-32 pb-20 px-6">

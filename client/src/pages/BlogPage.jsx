@@ -4,35 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { api, BASE_URL } from "../utils/api";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const BlogPage = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState("All");
-
-  const categories = ["All", "Media", "Leadership", "Innovation", "Broadcast"];
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const data = await api.blogs.getAll();
-        if (data.status === "success") {
-          setBlogs(data.data.blogs);
-        }
-      } catch (err) {
-        console.error("Failed to fetch blogs");
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchBlogs();
-  }, []);
-
-  const filteredBlogs =
-    filter === "All" ? blogs : blogs.filter((b) => b.category === filter);
-
+  // ...
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
+      <SEO
+        title="Journal"
+        description="Thoughts, insights, and stories from Anil Ayroor. Exploring the intersections of media, leadership, and innovation."
+      />
       <Navbar />
 
       <main className="pt-32 pb-20 px-6">

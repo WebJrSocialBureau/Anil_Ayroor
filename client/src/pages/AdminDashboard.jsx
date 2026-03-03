@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useToast } from "../context/ToastContext";
 import { useConfirm } from "../context/ConfirmContext";
+import SEO from "../components/SEO";
 
 const AdminDashboard = () => {
   const [blogs, setBlogs] = useState([]);
@@ -167,9 +168,12 @@ const AdminDashboard = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
+      <SEO
+        title="Admin Dashboard"
+        description="Manage your publications and content with ease and precision."
+      />
       <Navbar />
 
       <main className="pt-24 md:pt-32 pb-40 px-4 md:px-6">

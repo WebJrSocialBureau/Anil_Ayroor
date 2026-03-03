@@ -38,17 +38,11 @@ const Home = () => {
     ["100vh", "85vh"],
   );
 
-  // Mobile transformations
-  const videoHeightMobile = useTransform(
-    smoothProgress,
-    [0, 0.45],
-    ["100vh", "50vh"],
-  );
-  const videoWidthMobile = "100vw";
-
-  // Shared / Conditional
-  const videoWidth = isMobile ? videoWidthMobile : videoWidthDesktop;
-  const videoHeight = isMobile ? videoHeightMobile : videoHeightDesktop;
+  // Shared / Conditional - Simplify for mobile by using static values where possible
+  const videoWidth = isMobile ? "100vw" : videoWidthDesktop;
+  const videoHeight = isMobile
+    ? useTransform(smoothProgress, [0, 0.45], ["100vh", "50vh"])
+    : videoHeightDesktop;
 
   const videoBorderRadius = useTransform(smoothProgress, [0.2, 0.45], [0, 24]);
   const videoShadow = useTransform(
@@ -58,7 +52,9 @@ const Home = () => {
   );
 
   const titleOpacity = useTransform(smoothProgress, [0, 0.2], [1, 0]);
-  const titleScale = useTransform(smoothProgress, [0, 0.2], [1, 1.1]);
+  const titleScale = isMobile
+    ? 1
+    : useTransform(smoothProgress, [0, 0.2], [1, 1.1]);
   const scrollIndicatorOpacity = useTransform(
     smoothProgress,
     [0, 0.05],
@@ -153,6 +149,7 @@ const Home = () => {
               muted
               playsInline
               disablePictureInPicture
+              poster="/hero_image1.png"
               className="w-full h-full object-cover"
             >
               <source src="/Hero_Video.webm" type="video/webm" />

@@ -1,156 +1,18 @@
 import { useRef, useState, useMemo } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  AnimatePresence,
-} from "framer-motion";
+// ...
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import { Calendar, MapPin, Clock, ArrowRight, Filter, X } from "lucide-react";
 
 const EventsPage = () => {
-  const [filterLocation, setFilterLocation] = useState("All");
-  const [filterMonth, setFilterMonth] = useState("All");
-
-  const upcomingEvents = [
-    {
-      date: "MAR 15",
-      time: "10:30 AM",
-      location: "Kochi, Kerala",
-      title: "Media Literacy Summit 2026",
-      desc: "A keynote address on the future of satellite broadcasting and ethical journalism.",
-      category: "CONFERENCE",
-      id: "EVT-2603",
-      venue: "Kochi Marriott Hotel",
-      month: "MAR",
-    },
-    {
-      date: "APR 02",
-      time: "06:00 PM",
-      location: "Virtual",
-      title: "The Next Decade: Media & AI",
-      desc: "Live interactive session discussing the integration of AI tools in modern newsrooms.",
-      category: "TECH_WEBINAR",
-      id: "EVT-2604",
-      venue: "BIG TV Studio Hub",
-      month: "APR",
-    },
-    {
-      date: "APR 15",
-      time: "03:00 PM",
-      location: "Dubai, UAE",
-      title: "Middle East Media Forum",
-      desc: "Connecting international journalists with regional media leaders.",
-      category: "FORUM",
-      id: "EVT-2610",
-      venue: "Mina A'Salam",
-      month: "APR",
-    },
-    {
-      date: "APR 18",
-      time: "07:30 PM",
-      location: "Dubai, UAE",
-      title: "Gulf Media Excellence Awards",
-      desc: "An exclusive ceremony honoring leadership in Middle-East media innovations.",
-      category: "CEREMONY",
-      id: "EVT-2607",
-      venue: "Museum of the Future",
-      month: "APR",
-    },
-    {
-      date: "APR 22",
-      time: "02:00 PM",
-      location: "New Delhi",
-      title: "Press Freedom Awards Night",
-      desc: "Honoring the voices of integrity. Special guest appearance and panel discussion.",
-      category: "CEREMONY",
-      id: "EVT-2605",
-      venue: "Indira Gandhi Memorial",
-      month: "APR",
-    },
-    {
-      date: "MAY 05",
-      time: "05:00 PM",
-      location: "Kochi, Kerala",
-      title: "Digital Transformation Expo",
-      desc: "Showcasing the latest tools in digital broadcasting and content creation.",
-      category: "EXPO",
-      id: "EVT-2611",
-      venue: "Lulu Convention Center",
-      month: "MAY",
-    },
-    {
-      date: "MAY 10",
-      time: "09:00 AM",
-      location: "Trivandrum",
-      title: "Journalism Masterclass V1.0",
-      desc: "An intensive workshop for aspiring media professionals on narrative design.",
-      category: "WORKSHOP",
-      id: "EVT-2606",
-      venue: "Trivandrum Press Club",
-      month: "MAY",
-    },
-    {
-      date: "JUN 05",
-      time: "11:00 AM",
-      location: "Mumbai",
-      title: "Digital Narrative Forum",
-      desc: "Exploring the evolution of storytelling in the cross-platform era of journalism.",
-      category: "SYMPOSIUM",
-      id: "EVT-2608",
-      venue: "Grand Hyatt Mumbai",
-      month: "JUN",
-    },
-    {
-      date: "JUN 20",
-      time: "10:00 PM",
-      location: "Dubai, UAE",
-      title: "BIG TV Global Launch",
-      desc: "The official international unveiling of the BIG TV network globally.",
-      category: "LAUNCH",
-      id: "EVT-2609",
-      venue: "Burj Khalifa Annex",
-      month: "JUN",
-    },
-    {
-      date: "JUL 12",
-      time: "02:00 PM",
-      location: "Doha, Qatar",
-      title: "Al-Jazeera Media Lab Session",
-      desc: "A collaborative session on investigative journalism and emerging technologies.",
-      category: "LAB",
-      id: "EVT-2612",
-      venue: "Sheraton Grand Doha",
-      month: "JUL",
-    },
-  ];
-
-  // Filtration Logic
-  const filteredEvents = useMemo(() => {
-    return upcomingEvents.filter((event) => {
-      const matchLoc =
-        filterLocation === "All" || event.location.includes(filterLocation);
-      const matchMonth = filterMonth === "All" || event.month === filterMonth;
-      return matchLoc && matchMonth;
-    });
-  }, [filterLocation, filterMonth]);
-
-  const locations = [
-    "All",
-    "Kochi",
-    "Dubai",
-    "New Delhi",
-    "Mumbai",
-    "Trivandrum",
-    "Virtual",
-    "Doha",
-  ];
-  const months = ["All", "MAR", "APR", "MAY", "JUN", "JUL"];
-
+  // ...
   return (
     <div className="bg-[#050505] text-white min-h-screen relative font-sans">
+      <SEO
+        title="Events"
+        description="Stay updated with upcoming summits, webinars, and forums featuring Anil Ayroor. Join the conversation on the future of media."
+      />
       <Navbar />
 
       {/* HERO SECTION */}

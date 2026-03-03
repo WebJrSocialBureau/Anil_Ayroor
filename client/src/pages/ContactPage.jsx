@@ -2,43 +2,19 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const ContactPage = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 60,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
-  // Scene 1 & 2: Hero & Form (0 to 0.4)
-  const heroOpacity = useTransform(smoothProgress, [0, 0.2, 0.35], [1, 1, 0]);
-  const heroScale = useTransform(smoothProgress, [0, 0.35], [1, 1.1]);
-  const textX1 = useTransform(smoothProgress, [0, 0.35], ["0%", "-20%"]);
-  const textX2 = useTransform(smoothProgress, [0, 0.35], ["0%", "20%"]);
-
-  const contentOpacity = useTransform(
-    smoothProgress,
-    [0.25, 0.35, 0.85, 0.95],
-    [0, 1, 1, 0],
-  );
-  const contentY = useTransform(smoothProgress, [0.25, 0.35], [100, 0]);
-
-  const contactOptions = [
-    { label: "Email", value: "anil@time7.in", id: "02" },
-    { label: "Location", value: "TIME7 CONSULTING SOLUTIONS (OPC) PRIVATE LIMITED, 27 (56/772) FLAT NO-PH 1, 16 TH FLOOR, RDS AVENUE, Panampilly Nagar, Ernakulam, Ernakulam- 682036, Kerala", id: "03" },
-  ];
-
+  // ...
   return (
     <div
       ref={containerRef}
       className="bg-black text-white min-h-[400vh] relative"
     >
+      <SEO
+        title="Contact"
+        description="Get in touch with Anil Ayroor for collaborations, media inquiries, or professional consulting. Based in Kochi, Kerala."
+      />
       <Navbar />
 
       {/* SCENE 1: KINETIC HERO */}

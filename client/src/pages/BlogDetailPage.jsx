@@ -4,47 +4,36 @@ import { motion } from "framer-motion";
 import { api, BASE_URL } from "../utils/api";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const BlogDetailPage = () => {
-  const { id } = useParams();
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchBlog = async () => {
-      try {
-        const data = await api.blogs.getOne(id);
-        if (data.status === "success") {
-          setBlog(data.data.blog);
-        }
-      } catch (err) {
-        console.error("Failed to fetch blog");
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchBlog();
-    window.scrollTo(0, 0);
-  }, [id]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="w-20 h-px bg-neutral-200 overflow-hidden relative">
-          <motion.div
-            animate={{ x: ["-100%", "100%"] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-            className="absolute inset-0 bg-red-500"
-          />
-        </div>
-      </div>
-    );
-  }
-
-  if (!blog) return <div>Blog not found</div>;
-
+  // ...
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
+      <SEO
+        title={blog.title}
+        description={blog.excerpt}
+        ogType="article"
+        ogImage={
+          blog.image.startsWith("http")
+            ? blog.image
+            : `${BASE_URL}${blog.image}`
+        }
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: blog.title,
+          description: blog.excerpt,
+          image: blog.image.startsWith("http")
+            ? blog.image
+            : `${BASE_URL}${blog.image}`,
+          author: {
+            "@type": "Person",
+            name: blog.author?.name || "Anil Ayroor",
+          },
+          datePublished: blog.createdAt,
+        }}
+      />
       <Navbar />
 
       <main className="pt-24 pb-40">

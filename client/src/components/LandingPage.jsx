@@ -8,10 +8,26 @@ import Gallery from "./Gallery";
 import BlogSection from "./BlogSection";
 import ExperienceBridge from "./ExperienceBridge";
 import Footer from "./Footer";
+import SEO from "./SEO";
 
 const LandingPage = ({ galleryItems }) => {
   return (
     <main className="w-full relative">
+      <SEO
+        title="Home"
+        description="Official website of Anil Ayroor - Journalist, Media Professional, and Content Creator. Explore the latest insights, awards, and events."
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Anil Ayroor",
+          jobTitle: "Journalist & Media Professional",
+          url: "https://anilayroor.com",
+          sameAs: [
+            "https://twitter.com/anilayroor",
+            "https://linkedin.com/in/anilayroor",
+          ],
+        }}
+      />
       <Home />
       <About />
       <ZoomTransition>

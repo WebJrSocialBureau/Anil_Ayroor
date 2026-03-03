@@ -2,65 +2,20 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const AwardsPage = () => {
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 60,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
-  // Hero Animations
-  const heroOpacity = useTransform(smoothProgress, [0, 0.1, 0.2], [1, 1, 0]);
-  const heroScale = useTransform(smoothProgress, [0, 0.2], [1, 1.1]);
-  const heroY = useTransform(smoothProgress, [0, 0.2], [0, -100]);
-
-  const awards = [
-    {
-      year: "2025",
-      title: "Media Excellence Award",
-      organization: "Global Media Forum",
-      image:
-        "https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?auto=format&fit=crop&q=80&w=1200",
-      category: "Broadcasting",
-    },
-    {
-      year: "2024",
-      title: "Lifetime Achievement",
-      organization: "Journalism Society",
-      image:
-        "https://images.unsplash.com/photo-1589156206699-bc21e38c8a7d?auto=format&fit=crop&q=80&w=1200",
-      category: "Media",
-    },
-    {
-      year: "2023",
-      title: "Innovation in Media",
-      organization: "Digital Press Awards",
-      image:
-        "https://images.unsplash.com/photo-1453728180394-1979b91e91ae?auto=format&fit=crop&q=80&w=1200",
-      category: "Tech & Media",
-    },
-    {
-      year: "2022",
-      title: "Most Trusted Voice",
-      organization: "People's Choice India",
-      image:
-        "https://images.unsplash.com/photo-1603190287605-e6ade32fa852?auto=format&fit=crop&q=80&w=1200",
-      category: "Public Trust",
-    },
-  ];
-
+  // ...
   return (
     <div
       ref={containerRef}
       className="bg-[#050505] text-white min-h-[500vh] relative"
     >
+      <SEO
+        title="Awards & Recognition"
+        description="A list of prestigious awards and honors received by Anil Ayroor for his contributions to journalism and media."
+      />
       <Navbar />
 
       {/* Hero Section */}

@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async";
 import Lenis from "lenis";
 import LoadingScreen from "./components/LoadingScreen";
 // import CustomCursor from "./components/CustomCursor";
@@ -232,24 +233,26 @@ function App() {
   }, [isLoading]);
 
   return (
-    <Router>
-      <ToastProvider>
-        <ConfirmProvider>
-          <div className="antialiased text-black bg-white min-h-screen">
-            {/* <CustomCursor /> */}
+    <HelmetProvider>
+      <Router>
+        <ToastProvider>
+          <ConfirmProvider>
+            <div className="antialiased text-black bg-white min-h-screen">
+              {/* <CustomCursor /> */}
 
-            {isLoading ? (
-              <LoadingScreen onComplete={() => setIsLoading(false)} />
-            ) : (
-              <>
-                <ScrollToTop />
-                <AnimatedRoutes galleryItems={galleryItems} />
-              </>
-            )}
-          </div>
-        </ConfirmProvider>
-      </ToastProvider>
-    </Router>
+              {isLoading ? (
+                <LoadingScreen onComplete={() => setIsLoading(false)} />
+              ) : (
+                <>
+                  <ScrollToTop />
+                  <AnimatedRoutes galleryItems={galleryItems} />
+                </>
+              )}
+            </div>
+          </ConfirmProvider>
+        </ToastProvider>
+      </Router>
+    </HelmetProvider>
   );
 }
 

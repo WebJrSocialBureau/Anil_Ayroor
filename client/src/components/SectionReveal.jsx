@@ -32,9 +32,6 @@ const SectionReveal = ({ children }) => {
           style={{ scale: textScale, opacity: textOpacity }}
           className="relative flex flex-col items-center"
         >
-          <span className="text-red-500/30 text-[10px] font-bold tracking-[2em] uppercase mb-4">
-            Curated Showcase
-          </span>
           <h2 className="text-white text-[15vw] md:text-[12vw] font-display font-black leading-none uppercase tracking-tighter">
             PIONEER<span className="text-red-500">.</span>
           </h2>

@@ -2,68 +2,20 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import SEO from "../components/SEO";
 
 const AboutPage = () => {
   const containerRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 60,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
-  // Scene 1: Introduction Parallax (0 to 0.12)
-  const scene1Opacity = useTransform(
-    smoothProgress,
-    [0, 0.08, 0.12],
-    [1, 1, 0],
-  );
-  const scene1Scale = useTransform(smoothProgress, [0, 0.12], [1, 1.1]);
-
-  // Scene 2: The Vision Reveal (0.12 to 0.32)
-  const scene2Opacity = useTransform(
-    smoothProgress,
-    [0.12, 0.22, 0.32],
-    [0, 1, 0],
-  );
-  const scene2Y = useTransform(smoothProgress, [0.12, 0.22], [50, 0]);
-
-  // Scene 3: The Philosophy (0.32 to 0.52)
-  const scene3Opacity = useTransform(
-    smoothProgress,
-    [0.32, 0.42, 0.52],
-    [0, 1, 0],
-  );
-  const scene3Scale = useTransform(smoothProgress, [0.32, 0.42], [0.95, 1]);
-
-  // Scene 4: Career Odyssey (0.52 to 0.75)
-  const scene4Opacity = useTransform(
-    smoothProgress,
-    [0.52, 0.62, 0.72, 0.75],
-    [0, 1, 1, 0],
-  );
-  const scene4X = useTransform(smoothProgress, [0.55, 0.72], ["0%", "-60%"]);
-
-  // Scene 5: Global Vision (0.75 to 0.83)
-  const scene5Opacity = useTransform(
-    smoothProgress,
-    [0.75, 0.79, 0.81, 0.83],
-    [0, 1, 1, 0],
-  );
-
-  // Navbar scroll state
-  const navBg = useTransform(smoothProgress, [0, 0.05], [0, 1]);
-
+  // ...
   return (
     <div
       ref={containerRef}
       className="bg-black text-white min-h-[700vh] relative"
     >
+      <SEO
+        title="About"
+        description="Learn more about Anil Ayroor's journey in journalism, media production, and leadership. A career dedicated to storytelling and excellence."
+      />
       <Navbar />
       {/* SCENE 1: THE GENESIS */}
       <section className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">

@@ -5,6 +5,7 @@ import { api } from "../utils/api";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useToast } from "../context/ToastContext";
+import SEO from "../components/SEO";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -32,9 +33,12 @@ const LoginPage = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
+      <SEO
+        title="Admin Login"
+        description="Secure login portal for Anil Ayroor's website administration."
+      />
       <Navbar />
 
       <main className="pt-32 pb-20 px-6">

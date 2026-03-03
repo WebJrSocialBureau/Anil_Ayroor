@@ -57,7 +57,7 @@ const GrowthStory = () => {
     <section
       id="growth"
       ref={targetRef}
-      className="relative bg-white pt-34  md:pt-20 pb-32 md:pb-48 px-6 md:px-12 z-10 overflow-hidden"
+      className="relative bg-white pt-32 md:pt-20 pb-32 md:pb-48 px-6 md:px-12 z-10 overflow-hidden"
     >
       {/* Background Decorative Elements */}
       <motion.div
