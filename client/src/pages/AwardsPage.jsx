@@ -6,7 +6,47 @@ import SEO from "../components/SEO";
 
 const AwardsPage = () => {
   const containerRef = useRef(null);
-  // ...
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  const heroOpacity = useTransform(smoothProgress, [0, 0.15], [1, 0]);
+  const heroScale = useTransform(smoothProgress, [0, 0.15], [1, 0.8]);
+  const heroY = useTransform(smoothProgress, [0, 0.15], [0, -100]);
+
+  const awards = [
+    {
+      year: "2023",
+      category: "Journalism",
+      title: "Lifetime Achievement",
+      organization: "Global Media Forum",
+      image:
+        "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1000",
+    },
+    {
+      year: "2021",
+      category: "Innovation",
+      title: "Digital Pioneer Award",
+      organization: "Tech-Media Summit",
+      image:
+        "https://images.unsplash.com/photo-1589710788323-501509b3f9f6?auto=format&fit=crop&q=80&w=1000",
+    },
+    {
+      year: "2018",
+      category: "Leadership",
+      title: "Media Excellence",
+      organization: "National Press Club",
+      image:
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=1000",
+    },
+  ];
   return (
     <div
       ref={containerRef}

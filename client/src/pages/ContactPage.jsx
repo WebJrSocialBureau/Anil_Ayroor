@@ -5,7 +5,47 @@ import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 
 const ContactPage = () => {
-  // ...
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  const heroOpacity = useTransform(smoothProgress, [0, 0.2], [1, 0]);
+  const heroScale = useTransform(smoothProgress, [0, 0.2], [1, 0.8]);
+  const textX1 = useTransform(smoothProgress, [0, 0.2], [0, -100]);
+  const textX2 = useTransform(smoothProgress, [0, 0.2], [0, 100]);
+
+  const contentOpacity = useTransform(
+    smoothProgress,
+    [0.3, 0.45, 0.65],
+    [0, 1, 0],
+  );
+  const contentY = useTransform(smoothProgress, [0.3, 0.45], [100, 0]);
+
+  const contactOptions = [
+    {
+      id: "email",
+      label: "Direct_Email",
+      value: "anil@time7.in",
+    },
+    {
+      id: "location",
+      label: "Current_Base",
+      value: "Kochi, Kerala",
+    },
+    {
+      id: "consulting",
+      label: "Media_Strategy",
+      value: "Consulting Available",
+    },
+  ];
   return (
     <div
       ref={containerRef}

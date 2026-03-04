@@ -6,7 +6,54 @@ import SEO from "../components/SEO";
 import { Calendar, MapPin, Clock, ArrowRight, Filter, X } from "lucide-react";
 
 const EventsPage = () => {
-  // ...
+  const [filterLocation, setFilterLocation] = useState("All");
+  const [filterMonth, setFilterMonth] = useState("All");
+
+  const events = [
+    {
+      id: "EVT-01",
+      date: "MAR 15",
+      title: "Global Media Summit",
+      desc: "Keynote on the future of AI-driven journalism and ethical reporting standards in the digital age.",
+      category: "Summit",
+      time: "10:00 AM",
+      venue: "Grand Hyatt",
+      location: "Dubai",
+    },
+    {
+      id: "EVT-02",
+      date: "APR 22",
+      title: "Broadcast Innovation Forum",
+      desc: "Panel discussion on staff-owned media models and sustainable broadcasting ecosystems.",
+      category: "Forum",
+      time: "02:30 PM",
+      venue: "Le Méridien",
+      location: "Kochi",
+    },
+    {
+      id: "EVT-03",
+      date: "MAY 10",
+      title: "Leadership in Media",
+      desc: "Exclusive workshop for aspiring media professionals on editorial integrity and brand building.",
+      category: "Workshop",
+      time: "11:00 AM",
+      venue: "Radisson Blu",
+      location: "Mumbai",
+    },
+  ];
+
+  const locations = ["All", ...new Set(events.map((e) => e.location))];
+  const months = ["All", "MAR", "APR", "MAY", "JUN", "JUL"];
+
+  const filteredEvents = useMemo(() => {
+    return events.filter((e) => {
+      const locMatch =
+        filterLocation === "All" || e.location === filterLocation;
+      const monthMatch =
+        filterMonth === "All" || e.date.startsWith(filterMonth);
+      return locMatch && monthMatch;
+    });
+  }, [filterLocation, filterMonth]);
   return (
     <div className="bg-[#050505] text-white min-h-screen relative font-sans">
       <SEO

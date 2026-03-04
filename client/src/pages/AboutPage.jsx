@@ -6,7 +6,42 @@ import SEO from "../components/SEO";
 
 const AboutPage = () => {
   const containerRef = useRef(null);
-  // ...
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  const scene1Opacity = useTransform(smoothProgress, [0, 0.1], [1, 0]);
+  const scene1Scale = useTransform(smoothProgress, [0, 0.1], [1, 1.1]);
+
+  const scene2Opacity = useTransform(
+    smoothProgress,
+    [0.1, 0.2, 0.3],
+    [0, 1, 0],
+  );
+  const scene2Y = useTransform(smoothProgress, [0.1, 0.2], [50, 0]);
+
+  const scene3Opacity = useTransform(
+    smoothProgress,
+    [0.3, 0.45, 0.6],
+    [0, 1, 0],
+  );
+  const scene3Scale = useTransform(smoothProgress, [0.3, 0.45], [0.8, 1]);
+
+  const scene4Opacity = useTransform(
+    smoothProgress,
+    [0.6, 0.7, 0.85],
+    [0, 1, 0],
+  );
+  const scene4X = useTransform(smoothProgress, [0.6, 0.85], ["0%", "-100%"]);
+
+  const scene5Opacity = useTransform(smoothProgress, [0.85, 0.95], [0, 1]);
   return (
     <div
       ref={containerRef}
