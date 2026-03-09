@@ -3,14 +3,23 @@ import { motion } from "framer-motion";
 
 const ExperienceBridge = () => {
   const partners = [
-    "BIG TV MALAYALAM",
-    "REPORTER TV",
-    "ZEE KERALAM",
-    "FLOWERS TV",
-    "MAZHAVIL MANORAMA",
-    "ASIANET",
-    "RAJ TV",
-    "KERALA STARTUP MISSION",
+    {
+      name: "BIG TV MALAYALAM",
+      url: "https://www.bigtvlive.com/tag/big-tv-malayalam",
+    },
+    { name: "REPORTER TV", url: "https://www.reporterlive.com/" },
+    {
+      name: "ZEE KERALAM",
+      url: "https://www.zee5.com/tv-shows/zee-keralam-hd/0-9-129",
+    },
+    { name: "FLOWERS TV", url: "https://www.flowerstv.in/" },
+    { name: "MAZHAVIL MANORAMA", url: "https://www.manoramamax.com/" },
+    { name: "ASIANET", url: "https://www.asianetnews.com/" },
+    { name: "RAJ TV", url: "https://www.rajdigitaltv.com/" },
+    {
+      name: "KERALA STARTUP MISSION",
+      url: "https://startupmission.kerala.gov.in/",
+    },
   ];
 
   return (
@@ -45,9 +54,14 @@ const ExperienceBridge = () => {
         <div className="flex whitespace-nowrap animate-infinite-scroll">
           {[...partners, ...partners].map((partner, index) => (
             <div key={index} className="flex items-center mx-12 md:mx-20">
-              <span className="text-3xl md:text-5xl font-display font-black text-white/10 hover:text-red-600/40 transition-colors duration-500 cursor-default uppercase italic tracking-tighter">
-                {partner}
-              </span>
+              <a
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-3xl md:text-5xl font-display font-black text-white/10 hover:text-red-600 transition-colors duration-500 uppercase italic tracking-tighter"
+              >
+                {partner.name}
+              </a>
               <div className="ml-12 md:ml-20 w-2 h-2 rounded-full bg-red-600/20" />
             </div>
           ))}
