@@ -138,7 +138,7 @@ const GrowthStory = () => {
         >
           <div className="md:col-span-7 rounded-[48px] overflow-hidden relative h-[400px] md:h-[550px] group shadow-2xl">
             <img
-              src="/legacy_trust.png"
+              src="/hero_image2.jpeg"
               alt="Growth Narrative"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
               loading="lazy"

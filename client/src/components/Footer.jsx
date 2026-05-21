@@ -176,11 +176,26 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: "#", label: "Facebook" },
-    { icon: <Twitter className="w-5 h-5" />, href: "#", label: "X / Twitter" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#", label: "Instagram" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Youtube className="w-5 h-5" />, href: "#", label: "YouTube" },
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      href: "https://www.linkedin.com/in/anil-ayroor-a78487399/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Instagram className="w-5 h-5" />,
+      href: "https://www.instagram.com/anilayroor.official/",
+      label: "Instagram",
+    },
+    {
+      icon: <Facebook className="w-5 h-5" />,
+      href: "https://www.facebook.com/ayroor/",
+      label: "Facebook",
+    },
+    {
+      icon: <Youtube className="w-5 h-5" />,
+      href: "https://www.youtube.com/@bigtv24x7live",
+      label: "YouTube",
+    },
   ];
 
   const scrollToTop = () => {
@@ -345,32 +360,31 @@ const Footer = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mb-16 md:mb-24"
         >
-          <div className="relative mb-6 w-fit">
+          <div className="relative mb-6 w-full">
             <div className="absolute inset-0 bg-red-500/20 blur-3xl rounded-full"></div>
-            <a href="https://bigtv24x7.com">
-              <img
-                src="/logo/LOGO (2).png"
-                alt="Ayroor Logo"
-                className="relative z-10 h-30 md:h-35 object-contain brightness-110 contrast-125"
-              />
-            </a>
-          </div>
-          <div className="max-w-3xl border-l-2 border-red-500/20 pl-8 md:pl-10 py-3">
-            <p className="text-white/30 text-sm md:text-base font-light leading-relaxed">
-              Designed & Developed by{" "}
-              <a
-                style={{ fontFamily: "MyFont, sans-serif" }}
-                href="https://socialbureau.in"
-                className="text-white/80 hover:text-white transition-all duration-300 font-bold tracking-tight relative group inline-block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="relative z-10">
-                  Social<span className="text-red-500">B</span>ureau
-                </span>
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-red-500 to-red-700 group-hover:w-full transition-all duration-300"></span>
-              </a>
-            </p>
+            <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 relative z-10">
+
+              <div className="flex flex-row items-center gap-3 text-[9px] md:text-[11px] font-bold text-white/70 uppercase tracking-[0.2em] mt-6 justify-start w-full text-left relative z-10">
+
+                <span className="uppercase text-white/70">POWERED BY</span>
+
+                <a href="https://www.socialbureau.in/enquiry-form" target="_blank" rel="noopener noreferrer" className="flex justify-start items-center ml-2">
+
+                  <img
+
+                    src="https://www.socialbureau.in/assets/logo.webp"
+
+                    alt="SocialBureau"
+
+                    className="h-5 md:h-8 w-auto"
+
+                  />
+
+                </a>
+
+              </div>
+
+            </div>
           </div>
         </motion.div>
 
