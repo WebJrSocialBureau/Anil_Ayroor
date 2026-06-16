@@ -143,11 +143,7 @@ const BlogSection = () => {
                     {blog.excerpt}
                   </p>
 
-                  <div className="pt-2">
-                    <span className="text-[10px] font-black uppercase tracking-tighter border-b-2 border-red-500 pb-1 group-hover:tracking-widest transition-all duration-300">
-                      Discover Entry —
-                    </span>
-                  </div>
+
                 </div>
               </Link>
             </motion.div>
