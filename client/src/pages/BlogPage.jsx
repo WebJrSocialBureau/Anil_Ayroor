@@ -7,7 +7,31 @@ import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 
 const BlogPage = () => {
-  // ...
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState("All");
+
+  const categories = ["All", "Media", "Leadership", "Innovation", "Broadcast"];
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const data = await api.blogs.getAll();
+        if (data.status === "success") {
+          setBlogs(data.data.blogs);
+        }
+      } catch (err) {
+        console.error("Failed to fetch blogs");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
+  const filteredBlogs =
+    filter === "All" ? blogs : blogs.filter((b) => b.category === filter);
+
   return (
     <div className="bg-white min-h-screen selection:bg-red-500 selection:text-white">
       <SEO

@@ -6,7 +6,34 @@ import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 
 const GalleryPage = ({ items = [] }) => {
-  // ...
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const categories = ["All", ...new Set(items.map((item) => item.category))];
+
+  const filteredItems = useMemo(() => {
+    return activeCategory === "All"
+      ? items
+      : items.filter((item) => item.category === activeCategory);
+  }, [items, activeCategory]);
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setMousePos({ x: clientX, y: clientY });
+  };
+
+  const currentIndex = selectedImage
+    ? items.findIndex((i) => i.id === selectedImage.id)
+    : -1;
+
+  const navigateLightbox = (direction) => {
+    let nextIndex = currentIndex + direction;
+    if (nextIndex < 0) nextIndex = items.length - 1;
+    if (nextIndex >= items.length) nextIndex = 0;
+    setSelectedImage(items[nextIndex]);
+  };
+
   return (
     <div
       onMouseMove={handleMouseMove}

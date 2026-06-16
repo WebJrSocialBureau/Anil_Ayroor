@@ -82,7 +82,6 @@ const Navbar = () => {
                 // { name: "Awards", path: "/awards" },
                 // { name: "Events", path: "/events" },
                 { name: "Gallery", path: "/gallery" },
-                { name: "Blog", path: "/blog" },
                 { name: "About", path: "/about" },
                 { name: "Contact", path: "/contact" },
                 { name: "Login", path: "/login" },
